@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Settings;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Vite;
@@ -29,6 +30,9 @@ class AppServiceProvider extends ServiceProvider
         }
         Vite::prefetch(concurrency: 3);
 
-        View::share('settings', Settings::pluck('description', 'title')->toArray());
+        if (Schema::hasTable('settings')) {
+            View::share('settings', Settings::pluck('description', 'title')->toArray());
+        }
+        
     }
 }
