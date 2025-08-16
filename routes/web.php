@@ -28,7 +28,6 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
 
 
 Route::get("/", [FrontendController::class, 'index'])->name('frontend.index');
-Route::get("/p/{pagename}", [FrontendController::class, 'index'])->name('frontend.page');
-
+// Route::get("/p/{pagename}", [FrontendController::class, 'index'])->name('frontend.page');
 
 require __DIR__.'/auth.php';

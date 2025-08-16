@@ -2,47 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 use Session;
 use Str;
+
+use function Pest\Laravel\get;
 
 class FrontendController extends Controller
 {
     // referralLink
 
-public function index($pagename = "index")
-{
-        $name = ucfirst($pagename); // Capitalize first letter to match view name
+    public function index()
+    {
+
+        $pagename = Request()->query('q');
+        $name = strtolower($pagename); // Capitalize first letter to match view name
         $data = [];
 
-        // Set page-specific titles
-        switch (strtolower($pagename)) {
+        switch ($name) {
             case 'about':
                 $data['page_title'] = "About Us";
-                break;
+                return view("frontend.theme1." . $name, $data);
             case 'contact':
                 $data['page_title'] = "Contact Us";
-                break;
+                return view("frontend.theme1." . $name, $data);
+
+            case 'gallery':
+                $data['page_title'] = "Gallery";
+                return view("frontend.theme1." . $name, $data);
             default:
-                $data['page_title'] = ucfirst("Home");
-                break;
+                $data['page_title'] = "HomePage";
+                return view("frontend.theme1.index", $data);
         }
-
-        $data['title'] = $data['page_title']; // Optional if used in layout
-
-        // Check if view exists
-        if (view()->exists($name)) {
-            return view($name, $data);
-        }
-        
-        return view("Index", $data);
     }
-
-
-
-    // public function page($pagename)
-    // {
-    //     return view("Index");
-    // }
-
 }
