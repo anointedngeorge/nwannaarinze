@@ -2,22 +2,22 @@
     $galleries = (object) [
     (object) [
         'title' => 'Digital Business Solution',
-        'image' => asset('invena/images/project/07.webp'),
+        'image' => asset('invena/images/logo/logo-3.png'),
         'subTitle' => 'Business Strategy',
     ],
     (object) [
         'title' => 'Digital Business Solution',
-        'image' => asset('invena/images/project/07.webp'),
+        'image' => asset('invena/images/logo/logo-3.png'),
         'subTitle' => 'Business Strategy',
     ],
     (object) [
         'title' => 'Digital Business Solution',
-        'image' => asset('invena/images/project/07.webp'),
+        'image' => asset('invena/images/logo/logo-3.png'),
         'subTitle' => 'Business Strategy',
     ],
     (object) [
         'title' => 'Digital Business Solution',
-        'image' => asset('invena/images/project/07.webp'),
+        'image' => asset('invena/images/logo/logo-3.png'),
         'subTitle' => 'Business Strategy',
     ],
 ]
@@ -32,9 +32,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-style-four center">
-                    <span class="pre">Our Gallery</span>
+                    <span class="pre">Gallery</span>
                     <h2 class="title rts-text-anime-style-1">
-                        Our Business <span> Gallery</span>
+                        Our <span> Gallery</span>
                     </h2>
                 </div>
             </div>

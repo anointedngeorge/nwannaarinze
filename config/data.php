@@ -14,8 +14,9 @@ return [
     'instagram' => '#',
     'whatsapp' => "+2340002034303",
     'url' => 'https://example.com/',
-    'logo' => 'invena/images/logo/01.svg',
-
+    'logo' => 'invena/images/logo/logo-4.png',
+    'footer_logo' => 'invena/images/logo/logo-3.png',
+    'fav' => 'invena/images/logo/favicon.png',
     'links' => [
         ['title' => 'Home', 'classname' => 'active', 'link' => '/', 'index' => 1, 'has_children' => false, 'children' => []],
         ['title' => 'Contact', 'classname' => '#', 'link' => '/page/Contact', 'index' => 10, 'has_children' => false, 'children' => []],
@@ -48,6 +49,14 @@ return [
             'is' => '#'
         ],
 
+        (object) [
+            'name' => 'Kevin Martin',
+            'image' => 'invena/images/team/03.webp',
+            'position' => 'Consultant',
+            'fb' => '#',
+            'lk' => '#',
+            'is' => '#'
+        ],
         (object) [
             'name' => 'Kevin Martin',
             'image' => 'invena/images/team/03.webp',

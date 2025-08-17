@@ -5,7 +5,7 @@
             <div class="col-lg-3">
                 <div class="footer-logo-area-left-8">
                     <a href="#" class="logo">
-                        <img src="{{ config('data.logo') }}" alt="logo">
+                        <img style="height:120px;" src="{{ config('data.footer_logo') }}" alt="logo">
                     </a>
                     <p class="disc">
                         {{ config('data.footer_about') }}
@@ -27,18 +27,14 @@
                     </div>
                     <div class="quick-link-inner">
                         <ul class="links">
-                            <li><a href="#"><i class="far fa-arrow-right"></i> Forum Support</a></li>
-                            <li><a href="#"><i class="far fa-arrow-right"></i> Help &amp; FAQ</a></li>
-                            <li><a href="#"><i class="far fa-arrow-right"></i> Contact Us</a></li>
-                            <li><a href="#"><i class="far fa-arrow-right"></i> Pricing &amp; Plans</a></li>
-                            <li><a href="#"><i class="far fa-arrow-right"></i> Cookie Policy</a></li>
+                            @foreach ($navigationProvider as $n)
+                                @if ($n->show_on_footer)
+                                <li><a href="{{ $n->url }}"><i class="far fa-arrow-right"></i> {{ $n->title }}</a></li>
+                                @endif
+                            @endforeach
+
                         </ul>
-                        <ul class="links margin-left-70">
-                            <li><a href="#"><i class="far fa-arrow-right"></i> About Us</a></li>
-                            <li><a href="#"><i class="far fa-arrow-right"></i> My Account</a></li>
-                            <li><a href="#"><i class="far fa-arrow-right"></i>Our Company</a></li>
-                            <li><a href="#"><i class="far fa-arrow-right"></i>Service</a></li>
-                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -86,11 +82,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="copyright-8-wrapper">
-                        <p>{{ config('data.name') }} - Copyright <script>
-                            document.write(
-                                new Date().getFullYear()
-                            )
-                        </script>. All rights reserved.</p>
+                        <p>{{ config('data.name') }} - Copyright
+                            <script>
+                                document.write(
+                                    new Date().getFullYear()
+                                )
+                            </script>. All rights reserved.
+                        </p>
                         <ul>
                             <li><a href="privacy-policy.html">Privacy Policy</a></li>
                             <li><a href="terms-of-condition.html">Terms & Condition</a></li>

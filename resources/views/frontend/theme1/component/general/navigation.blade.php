@@ -7,7 +7,7 @@
             <div class="header-main-one-wrapper">
                 <div class="thumbnail">
                     <a href="{{ route('frontend.index') }}">
-                        <img src="{{ asset(config('data.logo')) }}" alt="finbiz-logo">
+                        <img src="{{ asset(config('data.logo')) }}" style="width: 300px;" alt="finbiz-logo">
                     </a>
                 </div>
                 <div class="main-header">

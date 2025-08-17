@@ -24,23 +24,28 @@ class navigationProvider extends ServiceProvider
             $view->with('navigationProvider', (object) [
                 (object) [
                     'title' => 'Home',
-                    'url' => route('frontend.index', ['q' => '#'])
+                    'url' => route('frontend.index', ['q' => '#']),
+                    'show_on_footer' => true
                 ],
                 (object) [
                     'title' => 'About',
-                    'url' => route('frontend.index', ['q' => 'about'])
+                    'url' => route('frontend.index', ['q' => 'about']),
+                    'show_on_footer' => true
                 ],
                 (object) [
                     'title' => 'Gallery',
-                    'url' => route('frontend.index', ['q' => 'gallery'])
+                    'url' => route('frontend.index', ['q' => 'gallery']),
+                    'show_on_footer' => true
                 ],
                 (object) [
                     'title' => 'Carrier',
-                    'url' => route('frontend.index', ['q' => 'carrier'])
+                    'url' => route('frontend.index', ['q' => 'carrier']),
+                    'show_on_footer' => true
                 ],
                 (object) [
                     'title' => 'Contact',
-                    'url' => route('frontend.index', ['q' => 'contact'])
+                    'url' => route('frontend.index', ['q' => 'contact']),
+                    'show_on_footer' => false
                 ],
             ]);
         });

@@ -4,7 +4,7 @@
             <div class="col-xl-4 col-lg-6">
                 <div class="footer-three-single-wized left">
                     <a href="index.html" class="logo_footer">
-                        <img src="{{ config('data.logo') }}" alt="Logo-image">
+                        <img src="{{ config('data.footer_logo') }}" alt="Logo-image">
                     </a>
                     <p class="disc">{{ config('data.footer_about') }}</p>
                     <ul class="social-three-wrapper">
