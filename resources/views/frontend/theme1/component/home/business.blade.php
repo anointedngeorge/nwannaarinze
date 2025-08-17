@@ -6,9 +6,9 @@
                     <div class="iamge-large">
                         <img src="invena/images/why-choose/07.webp" alt="choose">
                     </div>
-                    <div class="small-mobile">
-                        <img src="invena/images/why-choose/08.webp" alt="choose">
-                    </div>
+                    {{-- <div class="small-mobile">
+                        <img src="invena/images/why-choose/07.webp" alt="choose">
+                    </div> --}}
                     <div class="success-rate-area">
                         <div class="inner">
                             <h2 class="counter title"><span class="odometer" data-count="85">00</span>%

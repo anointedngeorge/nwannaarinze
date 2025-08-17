@@ -34,7 +34,7 @@
                         </div>
                         <div class="info-wrapper">
                             <span>Call Us 24/7</span>
-                            <a href="#">(+256) 2145.2156</a>
+                            <a href="#">{{ config('data.phone1') }}</a>
                         </div>
                     </div>
                     <div class="single-contact-info">
@@ -43,7 +43,7 @@
                         </div>
                         <div class="info-wrapper">
                             <span>Work with us</span>
-                            <a href="#">info@Invena.com</a>
+                            <a href="#">{{ config('data.email') }}</a>
                         </div>
                     </div>
                     <div class="single-contact-info">
@@ -52,7 +52,7 @@
                         </div>
                         <div class="info-wrapper">
                             <span>Our Location</span>
-                            <a href="#">125 Town, United State</a>
+                            <a href="#">{{ config('data.address') }}</a>
                         </div>
                     </div>
                 </div>

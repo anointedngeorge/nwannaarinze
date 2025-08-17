@@ -2,7 +2,6 @@
 
 
 @section('content')
-
     <!-- banner three area start -->
     @include('frontend.theme1.component.home.slider')
     <!-- banner three area end -->

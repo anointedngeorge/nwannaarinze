@@ -30,6 +30,10 @@ class FrontendController extends Controller
             case 'gallery':
                 $data['page_title'] = "Gallery";
                 return view("frontend.theme1." . $name, $data);
+
+            case 'carrier':
+                $data['page_title'] = "Carrier & Partnership Program";
+                return view("frontend.theme1." . $name, $data);
             default:
                 $data['page_title'] = "HomePage";
                 return view("frontend.theme1.index", $data);

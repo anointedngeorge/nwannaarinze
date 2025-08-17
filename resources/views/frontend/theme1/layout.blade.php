@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('invena/images/fav.png') }}">
-    <title>Invena Business Consulting HTML Template</title>
+    <title> @if ($page_title)
+        {{ $page_title }}
+    @endif </title>
     <link rel="stylesheet" href="{{ asset('invena/css/plugins/fontawesome.css') }}">
     <link rel="stylesheet" href="{{ asset('invena/css/plugins/swiper.css') }}">
     <link rel="stylesheet" href="{{ asset('invena/css/plugins/metismenu.css') }}">

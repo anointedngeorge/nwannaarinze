@@ -1,3 +1,19 @@
+<?php
+$reviews = (object) [
+    (object) [
+        'name' => 'William Henry',
+        'content' => "I can't recommend The Gourmet Haven enough. It's a place for special
+                                            occasions, date
+                                            nights, or whenever you're in the mood for a culinary adventure. The
+                                            combination of
+                                            exceptional.",
+        'pos' => (object) ['first' => 'Designer at', 'last' => 'Vertex Agency'],
+        'image' => asset('invena/images/testimonials/01.webp')
+    ]
+];
+?>
+
+
 <div class="rts-client-review-area rts-section-gapBottom">
     <div class="container">
         <div class="row">
@@ -23,68 +39,22 @@
                 <div class="testimonials-wrapper-swiper-demo-2">
                     <div class="swiper mySwiper-testimonials-dmeo-2">
                         <div class="swiper-wrapper">
-
-                            <div class="swiper-slide">
-                                <div class="testimonials-main-wrapper-two">
-                                    <div class="left-thumbnail">
-                                        <img src="invena/images/testimonials/01.webp" alt="testimonials">
-                                    </div>
-                                    <div class="right-content-testimonials">
-                                        <p class="disc">
-                                            I can't recommend The Gourmet Haven enough. It's a place for special
-                                            occasions, date
-                                            nights, or whenever you're in the mood for a culinary adventure. The
-                                            combination of
-                                            exceptional.
-                                        </p>
-                                        <div class="name-desig">
-                                            <h6 class="title">William Henry</h6>
-                                            <p>Designer at <b>Vertex Agency</b></p>
+                            @foreach ($reviews as $review)
+                                <div class="swiper-slide">
+                                    <div class="testimonials-main-wrapper-two">
+                                        <div class="left-thumbnail">
+                                            <img src="{{ $review->image }}" alt="testimonials">
+                                        </div>
+                                        <div class="right-content-testimonials">
+                                            <p class="disc">{{ $review->content }}</p>
+                                            <div class="name-desig">
+                                                <h6 class="title">{{ $review->name }}</h6>
+                                                <p>{{ $review->pos->first }} <b> {{ $review->pos->last }} </b></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonials-main-wrapper-two">
-                                    <div class="left-thumbnail">
-                                        <img src="invena/images/testimonials/01.webp" alt="testimonials">
-                                    </div>
-                                    <div class="right-content-testimonials">
-                                        <p class="disc">
-                                            I can't recommend The Gourmet Haven enough. It's a place for special
-                                            occasions, date
-                                            nights, or whenever you're in the mood for a culinary adventure. The
-                                            combination of
-                                            exceptional.
-                                        </p>
-                                        <div class="name-desig">
-                                            <h6 class="title">William Henry</h6>
-                                            <p>Designer at <b>Vertex Agency</b></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonials-main-wrapper-two">
-                                    <div class="left-thumbnail">
-                                        <img src="invena/images/testimonials/01.webp" alt="testimonials">
-                                    </div>
-                                    <div class="right-content-testimonials">
-                                        <p class="disc">
-                                            I can't recommend The Gourmet Haven enough. It's a place for special
-                                            occasions, date
-                                            nights, or whenever you're in the mood for a culinary adventure. The
-                                            combination of
-                                            exceptional.
-                                        </p>
-                                        <div class="name-desig">
-                                            <h6 class="title">William Henry</h6>
-                                            <p>Designer at <b>Vertex Agency</b></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            @endforeach
                         </div>
                     </div>
                 </div>
