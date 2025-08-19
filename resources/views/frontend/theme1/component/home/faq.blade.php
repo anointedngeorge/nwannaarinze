@@ -66,7 +66,7 @@
                 <div class="faq-one-thumbnail-wrapper-right" data-animation="zoomOut" data-delay="0.2"
                     data-duration="1.2">
                     <div class="thumbnail">
-                        <img src="invena/images/faq/01.webp" alt="faq">
+                        <img src="{{ asset(config('data.footer_logo'),) }}" alt="faq">
                     </div>
                 </div>
             </div>

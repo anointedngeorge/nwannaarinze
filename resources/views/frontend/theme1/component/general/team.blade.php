@@ -2,7 +2,7 @@
 $teams = (object) [
     (object) [
         'name' => 'PROF ODE OJOWU, OFR',
-        'image' => 'invena/images/team/01.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Chairman of the Board',
         'fb' => '#',
         'lk' => '#',
@@ -10,7 +10,7 @@ $teams = (object) [
     ],
     (object) [
         'name' => 'Arc. Kabir Ibrahim',
-        'image' => 'invena/images/team/02.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Director',
         'fb' => '#',
         'lk' => '#',
@@ -19,7 +19,7 @@ $teams = (object) [
 
     (object) [
         'name' => 'DR. ABDULKARIM KANA',
-        'image' => 'invena/images/team/03.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Director',
         'fb' => '#',
         'lk' => '#',
@@ -27,7 +27,7 @@ $teams = (object) [
     ],
     (object) [
         'name' => 'ENGR. MUHAMMAD NURAINI',
-        'image' => 'invena/images/team/03.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Director',
         'fb' => '#',
         'lk' => '#',
@@ -36,7 +36,7 @@ $teams = (object) [
 
     (object) [
         'name' => 'MUHAMMAD KABIR ABUBAKAR',
-        'image' => 'invena/images/team/03.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Director',
         'fb' => '#',
         'lk' => '#',
@@ -45,7 +45,7 @@ $teams = (object) [
 
     (object) [
         'name' => 'PIUS ADEMU AKUBO, SAN, FCArb',
-        'image' => 'invena/images/team/03.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Director',
         'fb' => '#',
         'lk' => '#',

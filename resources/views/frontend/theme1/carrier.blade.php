@@ -114,6 +114,11 @@
                             <div class="single-input">
                                 <input type="text" placeholder="Your Name">
                             </div>
+                            
+                            <div class="single-input">
+                                <input type="text" placeholder="Your State">
+                            </div>
+
                             <div class="single-input mb--30">
                                 <textarea placeholder="Type Your Message"></textarea>
                             </div>
@@ -123,7 +128,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="appoinment-thumbnail">
-                        <img src="invena/images/appoinment/01.webp" alt="appoinment">
+                        <img src="{{ config('data.footer_logo') }}" alt="appoinment">
                     </div>
                 </div>
             </div>

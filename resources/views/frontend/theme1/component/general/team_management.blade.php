@@ -2,7 +2,7 @@
 $teams = (object) [
     (object) [
         'name' => 'ENGR. MUHAMMAD NURAINI ADAMU',
-        'image' => 'invena/images/team/01.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Executive Director',
         'fb' => '#',
         'lk' => '#',
@@ -10,7 +10,7 @@ $teams = (object) [
     ],
     (object) [
         'name' => 'DALHATU ODOGA MAMMAN',
-        'image' => 'invena/images/team/02.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Manager, HR & Mgt Services',
         'fb' => '#',
         'lk' => '#',
@@ -19,7 +19,7 @@ $teams = (object) [
 
     (object) [
         'name' => 'ISA ADAMU',
-        'image' => 'invena/images/team/03.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Management Accountant',
         'fb' => '#',
         'lk' => '#',
@@ -27,7 +27,7 @@ $teams = (object) [
     ],
     (object) [
         'name' => 'LUCKY EDO',
-        'image' => 'invena/images/team/03.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Brand & Marketing Manager',
         'fb' => '#',
         'lk' => '#',
@@ -36,7 +36,7 @@ $teams = (object) [
 
     (object) [
         'name' => 'WILLIAMS AUGUSTINE',
-        'image' => 'invena/images/team/03.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'IT & Communication Manager',
         'fb' => '#',
         'lk' => '#',
@@ -45,7 +45,7 @@ $teams = (object) [
 
     (object) [
         'name' => 'IDOWU ADEMOLA',
-        'image' => 'invena/images/team/03.webp',
+        'image' => config('data.footer_logo'),
         'position' => 'Agric Business Manager',
         'fb' => '#',
         'lk' => '#',

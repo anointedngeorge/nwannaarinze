@@ -4,7 +4,7 @@ $contents = (object) [
         'title' => 'Our Vision',
         'subTitle' => '',
         'icon' => asset('invena/images/project/01.svg'),
-        'image' => asset('invena/images/project/11.webp'),
+        'image' => asset(config('data.footer_logo'),),
         'content' => "To be a clear leader in our chosen business interest in Nigeria and a Regional
 market.",
         'link' => (object) [
@@ -17,7 +17,7 @@ market.",
         'title' => 'Our Mission',
         'subTitle' => '',
         'icon' => asset('invena/images/project/01.svg'),
-        'image' => asset('invena/images/project/11.webp'),
+        'image' => asset(config('data.footer_logo'),),
         'content' => "To meet and exceed our customer's needs by providing quality and safe
 products and services based on global standards and in an ethical manner.",
         'link' => (object) [

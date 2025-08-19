@@ -7,22 +7,22 @@ $photos = (object) [
     (object) [
         'title' => '#',
         'url' => '#',
-        'image' => asset('invena/images/gallery/01.webp')
+        'image' => asset(config('data.footer_logo'),)
     ],
     (object) [
         'title' => '#',
         'url' => '#',
-        'image' => asset('invena/images/gallery/01.webp')
+        'image' => asset(config('data.footer_logo'),)
     ],
     (object) [
         'title' => '#',
         'url' => '#',
-        'image' => asset('invena/images/gallery/01.webp')
+        'image' => asset(config('data.footer_logo'),)
     ],
     (object) [
         'title' => '#',
         'url' => '#',
-        'image' => asset('invena/images/gallery/01.webp')
+        'image' => asset(config('data.footer_logo'),)
     ],
 ];
 

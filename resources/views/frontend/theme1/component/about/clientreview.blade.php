@@ -8,7 +8,7 @@ $reviews = (object) [
                                             combination of
                                             exceptional.",
         'pos' => (object) ['first' => 'Designer at', 'last' => 'Vertex Agency'],
-        'image' => asset('invena/images/testimonials/01.webp')
+        'image' => asset(config('data.footer_logo'),)
     ]
 ];
 ?>

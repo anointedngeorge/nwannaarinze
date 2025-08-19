@@ -31,7 +31,7 @@
                     <div class="button-area">
                         <button class="search" id="search" aria-label="Search"><i class="far fa-search"></i></button>
                         <a href="{{ route('frontend.index', ['q' => 'carrier']) }}"
-                            class="rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btn">Carrier</a>
+                            class="rts-btn btn-primary ml--20 ml_sm--5 header-one-btn quote-btn">Carrier Program</a>
                         <button id="menu-btn" aria-label="Menu" class="menu-btn menu ml--20 ml_sm--5">
                             <img class="menu-light" src="{{ asset("invena/images/icons/01.svg") }}" alt="Menu-icon">
                         </button>

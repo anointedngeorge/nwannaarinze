@@ -53,10 +53,10 @@
             <div class="col-lg-6">
                 <div class="thumbnail-business-area-right-two">
                     <div class="large-thumbnail">
-                        <img src="invena/images/business-goal/02.webp" alt="">
+                        <img src="{{ asset(config('data.footer_logo')) }}" alt="">
                     </div>
                     <div class="small-thumbnail images-r">
-                        <img src="invena/images/business-goal/01.webp" alt="">
+                        <img src="{{ asset(config('data.footer_logo'),) }}" alt="">
                     </div>
                 </div>
             </div>
