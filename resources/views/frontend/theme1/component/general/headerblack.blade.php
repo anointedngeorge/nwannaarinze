@@ -10,14 +10,14 @@
                                     {{ config('data.email') }}</a>
                             </div>
                             <div class="working-time">
-                                <p><i class="fal fa-clock"></i> Working: {{ config('data.time') }}</p>
+                                <p><i class="fal fa-clock "></i> <span style="margin-left: 5px;">{{ config('data.time') }}</span>  </p>
                             </div>
                         </div>
                         <div class="right">
                             <ul class="top-nav">
-                                <li><a href="blog-list.html">Company news</a></li>
+                                {{-- <li><a href="blog-list.html">Company news</a></li> --}}
                                 {{-- <li><a href="faq.html">Faq</a></li> --}}
-                                <li><a href="{{ route('frontend.index', ['q'=>'contact']) }}">Contact</a></li>
+                                <li><a href="tel: {{ config('data.phone1') }}">{{ config('data.phone1') }}</a></li>
                             </ul>
                             <ul class="social-wrapper-one">
                                 <li><a href="{{ config('data.facebook') }}" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>

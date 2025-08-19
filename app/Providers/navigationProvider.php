@@ -25,27 +25,32 @@ class navigationProvider extends ServiceProvider
                 (object) [
                     'title' => 'Home',
                     'url' => route('frontend.index', ['q' => '#']),
-                    'show_on_footer' => true
+                    'show_on_footer' => true,
+                    'show_on_header' => true
                 ],
                 (object) [
                     'title' => 'About',
                     'url' => route('frontend.index', ['q' => 'about']),
-                    'show_on_footer' => true
+                    'show_on_footer' => true,
+                    'show_on_header' => true
                 ],
                 (object) [
                     'title' => 'Gallery',
                     'url' => route('frontend.index', ['q' => 'gallery']),
-                    'show_on_footer' => true
+                    'show_on_footer' => true,
+                    'show_on_header' => true
                 ],
                 (object) [
                     'title' => 'Carrier',
                     'url' => route('frontend.index', ['q' => 'carrier']),
-                    'show_on_footer' => true
+                    'show_on_footer' => true,
+                    'show_on_header' => false
                 ],
                 (object) [
                     'title' => 'Contact',
                     'url' => route('frontend.index', ['q' => 'contact']),
-                    'show_on_footer' => false
+                    'show_on_footer' => false,
+                    'show_on_header' => true
                 ],
             ]);
         });

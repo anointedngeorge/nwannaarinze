@@ -2,17 +2,18 @@
 
 
 @section('content')
-
-
+    
     <!-- about us area wrapper main -->
     <div class="rts-breadcrumb-area">
         <div class="container">
+            
             <div class="row">
                 <div class="col-lg-12">
+                    
                     <div class="title-area-left center">
                         <span class="bg-title">Carrier</span>
                         <h1 class="title rts-text-anime-style-1">
-                            Carrier & Partnership
+                            Carrier & Partnership Program
                         </h1>
                     </div>
                 </div>
@@ -63,7 +64,7 @@
                             <div class="right-counter">
                                 <h2 class="counter title"><span class="odometer" data-count="89">00</span>%
                                 </h2>
-                                <p>Project Completed</p>
+                                <p>Program Completed</p>
                             </div>
                         </div>
                         <div class="single-progress-area ininner" data-animation="fadeInUp" data-delay="0.4">
@@ -80,7 +81,7 @@
                             <div class="right-counter">
                                 <h2 class="counter title"><span class="odometer" data-count="70">00</span>%
                                 </h2>
-                                <p>Business Awards</p>
+                                <p>Program Awards</p>
                             </div>
                         </div>
                     </div>

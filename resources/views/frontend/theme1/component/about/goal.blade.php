@@ -4,22 +4,23 @@
             <div class="col-lg-6">
                 <div class="consultancy-style-one">
                     <div class="title-style-two mb--40 left">
-                        <span class="bg-content">Business Goal</span>
-                        <span class="pre">JUST A CONSULTANCY</span>
-                        <h2 class="title rts-text-anime-style-1">We know how to manage <br>
-                            business globally
-                        </h2>
+                        {{-- <span class="bg-content">Business Goal</span> --}}
+                        <span class="pre">{{ config('data.name') }}</span>
+                        <p class="p rts-text-anime-style-1">
+                            We are a holding company with business interest in diverse sectors of the
+                            economy including; Hospitality, Agriculture, Manufacturing, Financial
+                            Services, Commodity Exports, Real Estate and Infrastructures Development.
+                        </p>
                     </div>
                     <div class="signle-consultancy mb--30">
                         <div class="icon">
                             <img src="invena/images/about/icons/01.svg" alt="">
                         </div>
                         <div class="information">
-                            <h4 class="title">Best Business Consulting</h4>
+                            <h4 class="title">Our Vision</h4>
                             <p class="disc">
-                                Fusce condimentum mattis placerat odio donec lacus porta torquent, mauris
-                                gravida
-                                rutrum
+                                To be a clear leader in our chosen business interest in Nigeria and a Regional
+                                market.
                             </p>
                         </div>
                     </div>
@@ -28,17 +29,15 @@
                             <img src="invena/images/about/icons/02.svg" alt="">
                         </div>
                         <div class="information">
-                            <h4 class="title">24/7 Customer Support</h4>
+                            <h4 class="title">Our Mission</h4>
                             <p class="disc">
-                                Fusce condimentum mattis placerat odio donec lacus porta torquent, mauris
-                                gravida
-                                rutrum
+                                To meet and exceed our customer's needs by providing quality and safe
+                                products and services based on global standards and in an ethical manner.
                             </p>
                         </div>
                     </div>
-                    <div class="button-wrapper mt--40" data-animation="fadeInUp" data-delay="0.4"
-                        data-duration="1.2">
-                        <a href="#" class="rts-btn btn-primary">Contact Us</a>
+                    <div class="button-wrapper mt--40" data-animation="fadeInUp" data-delay="0.4" data-duration="1.2">
+                        <a href="{{ route('frontend.index', ['q' => 'contact']) }}" class="rts-btn btn-primary">Contact Us</a>
                         <div class="vedio-icone">
                             <a class="video-play-button play-video popup-video"
                                 href="https://www.youtube.com/watch?v=vZE0j_WCRvI">

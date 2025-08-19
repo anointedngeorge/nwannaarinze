@@ -118,7 +118,7 @@ $contents = (object) [
                         <div class="swiper mySwiperh2_clients" dir="ltr">
                             <div class="swiper-wrapper">
                                 @foreach ($contents as $c)
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide content-center">
                                         {{-- <div class="single-feature-wrapper"> --}}
                                             <img src="invena/images/why-choose/icons/06.svg" width="50" alt="icon">
                                             <h5 class="title">{{ $c->title }}</h5>

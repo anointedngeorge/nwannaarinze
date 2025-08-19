@@ -37,7 +37,7 @@
     <!-- rts fun facts area end -->
 
     <!-- rts business case area start -->
-    @include('frontend.theme1.component.home.businesscase')
+    {{-- @include('frontend.theme1.component.home.galleryslide') --}}
     <!-- rts business case area end -->
 
     <!-- rtsd faq area start -->
@@ -45,7 +45,7 @@
     <!-- rtsd faq area end -->
 
     <!-- rts team area start -->
-    @include('frontend.theme1.component.home.team')
+    @include('frontend.theme1.component.general.team')
     <!-- rts team area end -->
 
     <!-- rts appoinment area start -->
@@ -53,12 +53,12 @@
     <!-- rts appoinment area end -->
 
     <!-- rts blog area start -->
-    @include('frontend.theme1.component.home.blog')
+    @include('frontend.theme1.component.general.team_management')
     <!-- rts blog area end -->
 
-    <!-- rts galllery area start -->
-    {{-- @include('frontend.theme1.component.home.gallery') --}}
-    <!-- rts galllery area end -->
+    <!-- rts business case area start -->
+    @include('frontend.theme1.component.general.galleryslide')
+    <!-- rts business case area end -->
 
 
 @endsection

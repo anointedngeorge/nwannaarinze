@@ -24,7 +24,7 @@ was incorporated on 19th December 2019. ',
     ],
 
     (object) [
-        'title' => (object) ['first' => 'RAHAMA .', 'in' => 'FISHERIES', 'last' => 'LIMITED'],
+        'title' => (object) ['first' => 'RAHAMA', 'in' => 'FISHERIES', 'last' => 'LIMITED'],
         'description' => "Rahama Fisheries Limited (RFL) is considered one of the leading fish farm in north
 central Nigeria. Incorporated on the 20 of December 2019, RFL is becoming widely
 known in the nation as according to the market analysis, internal fish sales from RFL in
@@ -58,7 +58,6 @@ palm trees and a cattle feed lot.",
 
     <div class="swiper mySwiper-banner-four">
         <div class="swiper-wrapper">
-            {{-- --}}
             @foreach ($slides as $slide)
 
                 <div class="swiper-slide">

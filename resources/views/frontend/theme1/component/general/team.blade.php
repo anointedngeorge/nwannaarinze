@@ -108,36 +108,9 @@ $teams = (object) [
                         </div>
                     @endforeach
                 </div>
+                <br><br><br><br><br>
                 <div class="swiper-pagination"></div>
             </div>
-
-
-            {{-- @foreach ($teams as $team)
-            <div class="col-lg-4 col-md-6 col-sm-12" data-animation="fadeInUp" data-delay="0.2" data-duration="1.2">
-                <div class="single-team-area-one-start">
-                    <a href="team-details.html" class="thumbnail">
-                        <img src="{{ asset($team->image) }}" alt="team">
-                    </a>
-                    <div class="inner-content">
-                        <div class="inner">
-                            <div class="text-top">
-                                <a href="team-details.html">
-                                    <h5 class="title">{{ $team->name }}</h5>
-                                </a>
-                                <span>{{ $team->position }}</span>
-                            </div>
-                            <div class="social-one-wrapper">
-                                <ul>
-                                    <li><a href="{{ $team->fb }}"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="{{ $team->lk }}"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="{{ $team->is }}"><i class="fa-brands fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach --}}
         </div>
     </div>
 </div>
