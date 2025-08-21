@@ -1,15 +1,17 @@
 <?php
 $reviews = (object) [
     (object) [
-        'name' => 'William Henry',
-        'content' => "I can't recommend The Gourmet Haven enough. It's a place for special
-                                            occasions, date
-                                            nights, or whenever you're in the mood for a culinary adventure. The
-                                            combination of
-                                            exceptional.",
-        'pos' => (object) ['first' => 'Designer at', 'last' => 'Vertex Agency'],
-        'image' => asset(config('data.footer_logo'),)
-    ]
+        'name' => 'MGT',
+        'content' => "Working with this team has been an incredible experience. They understood my business needs perfectly and delivered solutions that exceeded my expectations. Highly professional and reliable — I couldn’t ask for better!",
+        'pos' => (object) ['first' => 'Designer at', 'last' => 'nagari farms'],
+        'image' => asset(config('data.footer_logo'), )
+    ],
+    (object) [
+        'name' => 'MGT',
+        'content' => "I was impressed by their level of expertise and commitment. From the initial consultation to the final delivery, everything was seamless. Our productivity has improved significantly thanks to their innovative approach.”",
+        'pos' => (object) ['first' => 'Designer at', 'last' => 'Operations Manager'],
+        'image' => asset(config('data.footer_logo'), )
+    ],
 ];
 ?>
 

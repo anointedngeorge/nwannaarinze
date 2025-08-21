@@ -45,16 +45,20 @@
     <!-- rtsd faq area end -->
 
     <!-- rts team area start -->
-    @include('frontend.theme1.component.general.team')
+    {{-- @include('frontend.theme1.component.general.team') --}}
     <!-- rts team area end -->
+
+
+     <!-- rts blog area start -->
+     @include('frontend.theme1.component.general.team_management')
+     <!-- rts blog area end -->
 
     <!-- rts appoinment area start -->
     @include('frontend.theme1.component.home.appointment')
     <!-- rts appoinment area end -->
 
-    <!-- rts blog area start -->
-    @include('frontend.theme1.component.general.team_management')
-    <!-- rts blog area end -->
+
+   
 
     <!-- rts business case area start -->
     @include('frontend.theme1.component.general.galleryslide')
