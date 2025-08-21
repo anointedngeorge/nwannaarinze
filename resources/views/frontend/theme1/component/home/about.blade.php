@@ -17,7 +17,7 @@ job creation especially in the area of agriculture..."
         ]
     ],
 
-    'bigImage' => asset('invena/images/about/founder.png'),
+    'bigImage' => asset('invena/images/about/bg2.png'),
     'smallImage' => asset('invena/images/about/09.webp'),
     'link' => 'https://www.youtube.com/watch?v=vZE0j_WCRvI',
     'dataList' => (object) [
