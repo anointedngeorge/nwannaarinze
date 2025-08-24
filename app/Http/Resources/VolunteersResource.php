@@ -27,7 +27,6 @@ class VolunteersResource extends JsonResource
             'address'    => $this->address,
             'content'    => $this->content,
             'image'      => Storage::url($this->image),
-
         ];
     }
 }

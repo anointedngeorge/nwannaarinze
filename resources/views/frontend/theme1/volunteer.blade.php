@@ -49,15 +49,14 @@
                             </div>
                             <div class="become-volunteer__content">
                                 <h3 class="become-volunteer__title">Requirements</h3>
-                                <p class="become-volunteer__text">Aliquam hendrerit a augue insu image pellentes que id
-                                    erat quis sollicitud null mattis Ipsum is simply dummy typesetting industry. Alienum
-                                    phaedrum torquatos nec eu, vis detraxit periculis ex, nihil expetendis in meifn
-                                    pericula euripidis.</p>
+                                <p class="become-volunteer__text">To become a volunteer, you’ll need to meet the following criteria:</p>
                                 <ul class="list-unstyled become-volunteer__points">
-                                    <li>Nsectetur cing do not elit.</li>
-                                    <li>Suspe ndisse suscipit sagittis in leo.</li>
-                                    <li>Entum estibulum dignissim lipsm posuere.</li>
+                                    <li>Possess a strong commitment and readiness to collaborate effectively.</li>
+                                    <li>Demonstrate reliability and professionalism in all engagements.</li>
+                                    <li>Maintain a solid understanding of your industry and services.</li>
+                                    <li>Be prepared to uphold high standards and deliver quality consistently.</li>
                                 </ul>
+                                <p>These requirements ensure a smooth and successful partnership built on trust and mutual growth.</p>
                                 <div class="become-volunteer__contact">
                                     <p>
                                         <a href="tel:{{ config('data.phone1') }}" class="become-volunteer__phone">{{config('data.phone1')}}</a>
@@ -123,6 +122,9 @@
                     </div>
                 </div>
             </div>
+
+            @include('frontend.theme1.component.home.volunteers2')
+
         </section>
         <!--Become Volunteer End-->
 
