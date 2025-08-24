@@ -1,21 +1,21 @@
 <?php
 
 return [
-    'name' => "Al'Hakam Holdings Ltd ",
-    'phone1' => '(+234) 803-099-1029',
-    'phone2' => '(+234) 803-099-1029',
-    'address' => 'No. 9 Abu Abubakar Street, GRA, Keffi, Nasarawa',
-    'email' => "support@alhakamholdings.com",
+    'name' => "Nwanna Arinze Foundation",
+    'phone1' => '+2349020005932',
+    'phone2' => '+2349020005932',
+    'address' => 'No. 54 Federal College Road, Independence Layout by ESBS, Enugu',
+    'email' => "nwannaarinzefoundation@gmail.com",
     'time' => '09.00 AM - 05.00 PM',
     'linkedin' => '#',
-    'facebook' => '#',
+    'facebook' => 'https://web.facebook.com/nwannaarinzefoundation',
     'youtube' => '#',
     'twitter' => '#',
     'instagram' => '#',
     'whatsapp' => "+2340002034303",
     'url' => 'https://example.com/',
-    'logo' => 'invena/images/logo/logo-4.png',
-    'footer_logo' => 'invena/images/logo/logo-3.png',
+    'logo' => 'assets/images/logos/logo2.jpg',
+    'footer_logo' => 'assets/images/logos/logo1.png',
     'fav' => 'invena/images/logo/favicon.png',
     'links' => [
         ['title' => 'Home', 'classname' => 'active', 'link' => '/', 'index' => 1, 'has_children' => false, 'children' => []],
@@ -30,42 +30,6 @@ return [
 
     "dash_meta" => "",
     "dash_description" => "",
-
-    'teams' => (object) [
-        (object) [
-            'name' => 'Kevin Martin',
-            'image' => 'invena/images/team/01.webp',
-            'position' => 'Consultant',
-            'fb' => '#',
-            'lk' => '#',
-            'is' => '#'
-        ],
-        (object) [
-            'name' => 'Kevin Martin',
-            'image' => 'invena/images/team/02.webp',
-            'position' => 'Consultant',
-            'fb' => '#',
-            'lk' => '#',
-            'is' => '#'
-        ],
-
-        (object) [
-            'name' => 'Kevin Martin',
-            'image' => 'invena/images/team/03.webp',
-            'position' => 'Consultant',
-            'fb' => '#',
-            'lk' => '#',
-            'is' => '#'
-        ],
-        (object) [
-            'name' => 'Kevin Martin',
-            'image' => 'invena/images/team/03.webp',
-            'position' => 'Consultant',
-            'fb' => '#',
-            'lk' => '#',
-            'is' => '#'
-        ],
-    ],
 
 
 ];

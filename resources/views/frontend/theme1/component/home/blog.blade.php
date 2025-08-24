@@ -1,95 +1,78 @@
-<div class="rts-blog-area rts-section-gapBottom" id="blog">
+<?php
+
+$items = (object) [
+    (object) [
+        'image' => "assets/images/image2/afcc.webp",
+        'date' => "26 oct",
+        'title' => "Fake Charity: EFCC arrests 2 men over N21m fraud in Kaduna",
+        'content' => "The Kaduna Zonal Command of the Economic and Financial Crimes Commission has arrested the duo of Michael Yusuf Michael and Martha Daniel, promoters of MYM123CARE for allegedly obtaining money by false pretence. ADVERTISING Their arrest followed a petition alleging that the suspects on the pr",
+    ],
+
+    (object) [
+        'image' => "assets/images/image2/efcc.webp",
+        'date' => "27 sept",
+        'title' => "EFCC remands man in prison over N55m medical charity scam",
+        'content' => "The Kaduna Zonal Command of the Economic and Financial Crimes Commission has arraigned the duo of Michael Yusuf Michael and Martha Daniel Yusuf, both siblings, before Justice Hannnatu A.L Balogun on an eight-count charge bordering on obtaining by false pretence. The defendants allegedly floate"
+    ],
+
+    (object) [
+        'image' => "assets/images/image2/800ht.jpg",
+        'date' => "30 dec",
+        'title' => "Nwanna Arinze foundation empowers school children in Enugu",
+        'content' => "The programme which was tagged back to school project distributed learning materials to tje kids. speaking at the event, the president and founder Mr Arinze Nwanna who was represented by the oriject manager Mr Ogbenjuwa Moses urged the children to be of good behaviours"
+    ],
+];
+
+?>
+
+
+<!--Blog Two Start-->
+<section class="blog-one blog-two" id="news">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-style-four center">
-                    <span class="pre">Weekly Updates</span>
-                    <h2 class="title rts-text-anime-style-1">
-                        Our Latest <span>Updates</span>
-                    </h2>
-                </div>
-            </div>
+        <div class="section-title text-center">
+            <span class="section-title__tagline">From the Blog</span>
+            <h2 class="section-title__title">News & Articles</h2>
         </div>
-        <div class="row g-5 mt--10">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="single-blog-area-four">
-                    <a href="blog-details.html" class="thumbnail">
-                        <img src="invena/images/blog/07.webp" alt="blog">
-                    </a>
-                    <div class="inner-content">
-                        <div class="tag-area-wrapper">
-                            <div class="single">
-                                <i class="fa-light fa-clock"></i>
-                                <p>25 Jan, 2022</p>
+        <div class="row">
+
+
+
+            <!--Blog One single-->
+            @foreach ($items as $item)
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="blog-one__single">
+                        <div class="blog-one__img">
+                            <img src="{{ $item->image }}" alt="{{ $item->title }}" style="width: 100%; height: 300px;">
+                            <div class="blog-one__date">
+                                <p>{{ $item->date }}</p>
                             </div>
-                            <div class="single">
-                                <i class="fa-light fa-user"></i>
-                                <p>25 Jan, 2022</p>
+                            <a href="blog-details.html">
+                                <span class="news-one__plus"></span>
+                            </a>
+                        </div>
+                        <div class="blog-one__content">
+                            <ul class="list-unstyled blog-one__meta">
+                                <li><a href="blog-details.html"><i class="far fa-user-circle"></i> Admin</a></li>
+                                {{-- <li><a href="blog-details.html"><i class="far fa-comments"></i> 2 Comments</a></li>
+                                --}}
+                            </ul>
+                            <h3 class="blog-one__title">
+                                <a href="blog-details.html">{{$item->title}}</a>
+                            </h3>
+                            <p class="blog-one__text">{{ $item->content }}
+                            </p>
+                            <div class="blog-one__bottom">
+                                <a href="blog-details.html" class="blog-one__btn">Read More</a>
+                                <a href="blog-details.html" class="blog-one__arrow"><span
+                                        class="icon-right-arrow"></span></a>
                             </div>
                         </div>
-                        <a href="blog-details.html">
-                            <h5 class="title">
-                                My Journey with Lessons Of <br> Learned Along the Way
-                            </h5>
-                        </a>
-                        <a href="blog-details.html" class="read-more">Read More <i
-                                class="fa-sharp fa-regular fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="single-blog-area-four">
-                    <a href="blog-details.html" class="thumbnail">
-                        <img src="invena/images/blog/08.webp" alt="blog">
-                    </a>
-                    <div class="inner-content">
-                        <div class="tag-area-wrapper">
-                            <div class="single">
-                                <i class="fa-light fa-clock"></i>
-                                <p>25 Jan, 2022</p>
-                            </div>
-                            <div class="single">
-                                <i class="fa-light fa-user"></i>
-                                <p>25 Jan, 2022</p>
-                            </div>
-                        </div>
-                        <a href="blog-details.html">
-                            <h5 class="title">
-                                The quick settle tips new ages <br>
-                                exist working solution
-                            </h5>
-                        </a>
-                        <a href="blog-details.html" class="read-more">Read More <i
-                                class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="single-blog-area-four">
-                    <a href="blog-details.html" class="thumbnail">
-                        <img src="invena/images/blog/09.webp" alt="blog">
-                    </a>
-                    <div class="inner-content">
-                        <div class="tag-area-wrapper">
-                            <div class="single">
-                                <i class="fa-light fa-clock"></i>
-                                <p>25 Jan, 2022</p>
-                            </div>
-                            <div class="single">
-                                <i class="fa-light fa-user"></i>
-                                <p>25 Jan, 2022</p>
-                            </div>
-                        </div>
-                        <a href="blog-details.html">
-                            <h5 class="title">
-                                Unlocking the Secrets to A <br> Beginner’s Guide
-                            </h5>
-                        </a>
-                        <a href="blog-details.html" class="read-more">Read More <i
-                                class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
+
         </div>
     </div>
-</div>
+</section>
+<!--Blog Two End-->

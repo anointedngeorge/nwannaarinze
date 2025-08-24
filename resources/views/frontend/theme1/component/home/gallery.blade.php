@@ -1,50 +1,40 @@
-<div class="rts-gallery-area">
-    <div class="container-full">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="gallery-area-main-wrapper-4">
-                    <div class="single-gallery">
-                        <a href="invena/images/gallery/01.webp" class="thumbnail gallery-image">
-                            <img src="invena/images/gallery/01.webp" alt="gallery">
-                        </a>
-                        <div class="instagram">
-                            <img src="invena/images/gallery/instagram.svg" alt="instagram.svg">
+     
+     <?php
+     
+        $items = [
+            "assets/images/image2/use.jpg",
+            "assets/images/image2/res1.jpg",
+            "assets/images/image2/R.jpg",
+            "assets/images/image2/widows.jpg",
+            "assets/images/image2/water.jpg",
+        ]
+
+     ?>
+     
+     <!--Gallery One Start-->
+     <section class="gallery-one">
+        <div class="gallery-one__container">
+            <ul class="gallery-one__content list-unstyled">
+
+                @foreach ($items as $item )
+                    <li class="gallery-one__single wow fadeInUp" data-wow-delay="100ms">
+                    <div class="gallery-one__img-box">
+                        <div class="gallery-one__img-inner">
+                            <img style="height: 200px;" src="{{ asset($item) }}" alt="">
+                        </div>
+                        <div class="gallery-one__img-overly">
+                            <div class="gallery-one__icon-bg">
+                                <img src="assets/images/shapes/gallery-shape.png" alt="">
+                            </div>
+                            <a class="img-popup" href="{{ asset($item) }}">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="single-gallery">
-                        <a href="invena/images/gallery/03.webp" class="thumbnail gallery-image">
-                            <img src="invena/images/gallery/03.webp" alt="gallery">
-                        </a>
-                        <div class="instagram">
-                            <img src="invena/images/gallery/instagram.svg" alt="instagram.svg">
-                        </div>
-                    </div>
-                    <div class="single-gallery">
-                        <a href="invena/images/gallery/04.webp" class="thumbnail gallery-image">
-                            <img src="invena/images/gallery/04.webp" alt="gallery">
-                        </a>
-                        <div class="instagram">
-                            <img src="invena/images/gallery/instagram.svg" alt="instagram.svg">
-                        </div>
-                    </div>
-                    <div class="single-gallery">
-                        <a href="invena/images/gallery/05.webp" class="thumbnail gallery-image">
-                            <img src="invena/images/gallery/05.webp" alt="gallery">
-                        </a>
-                        <div class="instagram">
-                            <img src="invena/images/gallery/instagram.svg" alt="instagram.svg">
-                        </div>
-                    </div>
-                    <div class="single-gallery">
-                        <a href="invena/images/gallery/02.webp" class="thumbnail gallery-image">
-                            <img src="invena/images/gallery/02.webp" alt="gallery">
-                        </a>
-                        <div class="instagram">
-                            <img src="invena/images/gallery/instagram.svg" alt="instagram.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </li>
+                @endforeach
+
+            </ul>
         </div>
-    </div>
-</div>
+    </section>
+    <!--Gallery One End-->

@@ -2,67 +2,56 @@
 
 
 @section('content')
-    <!-- banner three area start -->
+    <!--Main Slider Two Start-->
     @include('frontend.theme1.component.home.slider')
-    <!-- banner three area end -->
+    <!--Main Slider Two End-->
 
-    <!-- rts about area start -->
+    <!--Feature Two Start-->
+    @include('frontend.theme1.component.home.feature')
+    <!--Feature Two End-->
+
+    <!--About One Start-->
     @include('frontend.theme1.component.home.about')
-    <!-- rts about area end -->
+    <!--About One End-->
 
-    <!-- rts brand area start -->
+    <!--Fundraising Start-->
+    @include('frontend.theme1.component.home.fundraising')
+    <!--Fundraising End-->
+
+    <!--Cause Two End-->
+    @include('frontend.theme1.component.home.project')
+    <!--Cause Two End-->
+
+    <!--Gallery One Start-->
+    @include('frontend.theme1.component.home.gallery')
+    <!--Gallery One End-->
+
+    <!--Testimonial Two Start-->
+    @include('frontend.theme1.component.home.testimonial')
+    <!--Testimonial Two End-->
+
+    <!--Volunteers One Start-->
+    @include('frontend.theme1.component.home.volunteers2')
+    <!--Volunteers One End-->
+
+    <!--We Change Start-->
+    @include('frontend.theme1.component.home.we_change')
+    <!--We Change End-->
+
+    <!--Brand Two Start-->
     {{-- @include('frontend.theme1.component.home.brand') --}}
-    <!-- rts brand area end -->
+    <!--Brand Two End-->
 
-    <!-- why choose us area start -->
-    @include('frontend.theme1.component.home.whychooseus')
-    <!-- why choose us area end -->
+    <!--Blog Two Start-->
+    @include('frontend.theme1.component.home.blog')
+    <!--Blog Two End-->
 
-    <!-- rts call to action area start -->
-    {{-- @include('frontend.theme1.component.home.calltoaction') --}}
-    @include('frontend.theme1.component.general.subscribe')
-    <!-- rts call to action area end -->
+     <!--events Two Start-->
+     @include('frontend.theme1.component.general.events')
+     <!--events Two End-->
 
-
-    {{-- mission --}}
-    @include('frontend.theme1.component.general.mission')
-    {{-- end mission --}}
-
-    <!-- business solution area start -->
-    @include('frontend.theme1.component.home.business')
-    <!-- business solution area end -->
-
-    <!-- rts fun facts area start -->
-    @include('frontend.theme1.component.home.facts')
-    <!-- rts fun facts area end -->
-
-    <!-- rts business case area start -->
-    {{-- @include('frontend.theme1.component.home.galleryslide') --}}
-    <!-- rts business case area end -->
-
-    <!-- rtsd faq area start -->
-    @include('frontend.theme1.component.home.faq')
-    <!-- rtsd faq area end -->
-
-    <!-- rts team area start -->
-    {{-- @include('frontend.theme1.component.general.team') --}}
-    <!-- rts team area end -->
-
-
-     <!-- rts blog area start -->
-     @include('frontend.theme1.component.general.team_management')
-     <!-- rts blog area end -->
-
-    <!-- rts appoinment area start -->
-    @include('frontend.theme1.component.home.appointment')
-    <!-- rts appoinment area end -->
-
-
-   
-
-    <!-- rts business case area start -->
-    @include('frontend.theme1.component.general.galleryslide')
-    <!-- rts business case area end -->
-
+    <!--Help People Start-->
+    @include('frontend.theme1.component.home.help')
+    <!--Help People End-->
 
 @endsection

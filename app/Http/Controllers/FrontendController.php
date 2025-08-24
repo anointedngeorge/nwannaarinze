@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePartnershipRequest;
+use App\Http\Requests\StoreVolunteersRequest;
+use App\Models\Media;
+use App\Models\Partnership;
+use App\Models\Volunteers;
 use Illuminate\Support\Facades\Request;
 use Session;
 use Str;
@@ -31,12 +36,88 @@ class FrontendController extends Controller
                 $data['page_title'] = "Gallery";
                 return view("frontend.theme1." . $name, $data);
 
-            case 'carrier':
-                $data['page_title'] = "Carrier & Partnership Program";
+            case 'volunteer':
+                $data['page_title'] = "Become A Volunteer";
+                return view("frontend.theme1." . $name, $data);
+
+            case 'partnership':
+                $data['page_title'] = "Become A Partner";
+                return view("frontend.theme1." . $name, $data);
+            case 'events':
+                $data['page_title'] = "Events";
                 return view("frontend.theme1." . $name, $data);
             default:
-                $data['page_title'] = "HomePage";
+                $data['page_title'] = "Welcome To " . config('data.name');
                 return view("frontend.theme1.index", $data);
         }
     }
+
+
+    public function register_volunteer(StoreVolunteersRequest $request)
+    {
+        $data = $request->validated();
+
+        // dd($data);
+
+        // Check if image is uploaded
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = $file->store(
+                'medias/' . $data['name'],
+                'public'
+            );
+            
+
+            $media = Media::create([
+                'media' => $path,
+                'title' => $data['name'],
+                // 'type' => $file->getClientMimeType(),
+            ]);
+
+            // Save the uploaded media path or ID to volunteers table
+            $data['image'] = $media->media;
+        }
+
+        Volunteers::create($data);
+
+        session()->flash('type', 'success');
+        session()->flash('message', "{$data['name']} successfully enrolled into our volunteer program");
+
+        return to_route('frontend.index');
+    }
+
+
+    public function register_partnership(StorePartnershipRequest $request)
+    {
+        $data = $request->validated();
+
+        // dd($data);
+
+        // Check if image is uploaded
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = $file->store(
+                'medias/' . $data['name'] . 'partnership',
+                'public'
+            );
+
+
+            $media = Media::create([
+                'media' => $path,
+                'title' => $data['name'],
+                // 'type' => $file->getClientMimeType(),
+            ]);
+
+            // Save the uploaded media path or ID to volunteers table
+            $data['image'] = $media->media;
+        }
+
+        Partnership::create($data);
+
+        session()->flash('type', 'success');
+        session()->flash('message', "{$data['name']} Successfully enrolled into our partnership program.");
+
+        return to_route('frontend.index');
+    }
+
 }

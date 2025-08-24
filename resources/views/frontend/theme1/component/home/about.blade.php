@@ -1,109 +1,65 @@
-<?php
-$about = (object) [
-    "topTitle" => config('data.name'),
-    'title' => 'Innovative Solutions',
-    'subTitle' => 'for Modern Agriculture',
-    'description' => (object) [
-        (object) [
-            'title' => 'Profile',
-            'content' => 'Al\'Hakam Holdings Ltd derives its name from an Arabic word Al\'Hakam meaning "the one who always delivers justice, in every situation, to everyone." It is a private equity and investment holding company. The company proactively identifies growth opportunities in various industries of interest. Founded in 2020, Al\'Hakam Holdings has built a sizable portfolio of investments. Our main focus is on creating and optimising value on shareholders\' interest through our continuous effort to build a long-term sustainable group of companies. Al\'Hakam Holdings is committed to a philosophy of transparent work ethics, business integrity and accountability throughout all our business transactions.',
-        ],
-        (object) [
-            'title' => '',
-            'content' => "Our key area of focus is on incorporating the country's agricultural
-transformation agenda, therefore, becoming one of the dominant
-contributors in sustainable economic growth through our investments and
-job creation especially in the area of agriculture..."
-        ]
-    ],
-
-    'bigImage' => asset('invena/images/about/bg2.png'),
-    'smallImage' => asset('invena/images/about/09.webp'),
-    'link' => 'https://www.youtube.com/watch?v=vZE0j_WCRvI',
-    'dataList' => (object) [
-        (object) [
-            'title' => 'Business Solution',
-            'percent' => '100%'
-        ],
-        (object) [
-            'title' => 'Empowering Success',
-            'percent' => '100%'
-        ],
-        (object) [
-            'title' => 'Simplifying Success',
-            'percent' => '99%'
-        ],
-    ]
-
-]
-?>
-
-
-
-<div class="rts-about-area about-bg-four bg_image rts-section-gap" id="about">
-    <div class="container pt--50">
-        <div class="row align-items-center">
-            <div class="col-lg-7">
-                <div class="about-content-four-left">
-                    <div class="title-style-four left">
-                        <span class="pre">{{ $about->topTitle }}</span>
-                        <h2 class="title rts-text-anime-style-1">{{ $about->title }} <br>
-                            <span>{{ $about->subTitle }}</span>
-                        </h2>
+<!--About One Start-->
+<section class="about-one" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="about-one__left">
+                    <div class="about-one__img wow slideInLeft" data-wow-delay="100ms"
+                        data-wow-duration="2500ms">
+                        <img src="assets/images/image2/use.jpg" alt="">
+                        <div class="about-one__badge">
+                            <img src="assets/images/logos/logo1.png" alt="" style="width: 100%; height: 100%;">
+                        </div>
                     </div>
-                    @foreach ($about->description as $d)
-                        {{-- <h3>{{ $d->title }}</h3> --}}
-                        <p class="disc">
-                            {{ $d->content }}
-                        </p>
-                    @endforeach
-                    
-                    <a href="{{ route('frontend.index', ['q' => 'about']) }}" class="rts-btn btn-primary">Continue Reading...</a>
-
-                    {{-- <div class="progress-wrapper-about-4">
-
-                        @foreach ($about->dataList as $list)
-
-                            <div class="single-progress">
-                                <h6 class="title">{{ $list->title }}</h6>
-                                <div class="progress">
-                                    <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s"
-                                        role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
-                                        aria-valuemax="100">
-                                    </div>
-                                    <span class="progress-number">{{ $list->percent }}</span>
-                                </div>
-                            </div>
-
-                        @endforeach
-
-                    </div> --}}
                 </div>
             </div>
-            <div class="col-lg-5">
-                <div class="thumbnail-about-right-4">
-                    <div class="large-iamge">
-                        <img src="{{ $about->bigImage }}" alt="about">
+            <div class="col-xl-6">
+                <div class="about-one__right">
+                    <div class="about-one-shape float-bob-y"><img src="assets/images/shapes/about-one-shape.png"
+                            alt=""></div>
+                    <div class="section-title text-left">
+                        <span class="section-title__tagline">Welcome to Nwanna Arinze Fundation</span>
+                        <h2 class="section-title__title">We're dedicated to improving lives</h2>
                     </div>
-                    {{-- <div class="small-image images-r">
-                        <img src="{{ $about->smallImage }}" alt="about">
-                    </div> --}}
-                    {{-- <div class="poligon-shape images-r">
-                        <img src="{{ asset('invena/images/about/poligon-shape.svg') }}" alt="">
-                    </div> --}}
-                    {{-- <div class="video-area">
-                        <img src="{{ asset('invena/images/about/video.svg') }}" alt="video">
-                        <div class="vedio-icone">
-                            <a class="video-play-button play-video popup-video" href="{{ $about->link }}">
-                                <span></span>
-                            </a>
-                            <div class="video-overlay">
-                                <a href="#section1" class="video-overlay-close">×</a>
-                            </div>
+                    <div class="about-one__content">
+                        <div class="about-one__content-icon">
+                            <span class="icon-charity"></span>
                         </div>
-                    </div> --}}
+                        <p class="about-one__content-text">Everyday we see people pass through challenges ranging from lack of basic amenities and social infrastructures and we are concerned about how to be of help in one way or the other.</p>
+                    </div>
+                    <p class="about-one__text">
+
+                        This quest for a better society drives us into this epoch making project ensuring that people are liberated from lack and poverty. Please be a part of those that make histry by volunteering or donating today.
+                    </p>
+                    <ul class="about-one__points list-unstyled">
+                        <li>
+                            <div class="icon">
+                                <span class="icon-confirmation"></span>
+                            </div>
+                            <div class="text">
+                                <p>Join our Team</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <span class="icon-confirmation"></span>
+                            </div>
+                            <div class="text">
+                                <p>Quick Fundraising</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="about-one__points-content list-unstyled">
+                        <li>
+                            <p class="about-one__points-text">Join us as a volunteer and help shape a brighter future</p>
+                        </li>
+                        <li>
+                            <p class="about-one__points-text">Your kind gesture will go a long way raising and building great future.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+<!--About One End-->

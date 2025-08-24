@@ -1,92 +1,136 @@
 @extends('frontend.theme1.layout')
 
- @section('content')
- <div class="rts-breadcrumb-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-area-left center">
-                    <span class="bg-title">Contact</span>
-                    <h1 class="title rts-text-anime-style-1">
-                        Contact Us
-                    </h1>
+@section('content')
+        
+        <section class="page-header">
+            <div class="page-header-bg" style="background-image: url(assets/images/images/page-header-bg.jpg)">
+            </div>
+            <div class="container mt-12">
+                <div class="page-header__inner">
+                    <h2>Contact</h2>
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="index.html"></a></li>
+                        <li><span></span></li>
+                        <li class="active"></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="shape-area">
-        <img src="invena/images/about/shape/01.png" alt="shape" class="one">
-        <img src="invena/images/about/shape/02.png" alt="shape" class="two">
-        <img src="invena/images/about/shape/03.png" alt="shape" class="three">
-    </div>
-</div>
+        </section>
+        <!--Page Header End-->
 
-
-<!-- contact areas main -->
-<div class="rts-contact-area-in-page" data-animation="fadeInUp" data-delay="0.2">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="contact-info-area-wrapper-p new">
-                    <div class="single-contact-info">
-                        <div class="icon">
-                            <i class="fa-solid fa-phone-flip"></i>
-                        </div>
-                        <div class="info-wrapper">
-                            <span>Call Us 24/7</span>
-                            <a href="#">{{ config('data.phone1') }}</a>
+        <!--Contact Page Start-->
+        <section class="contact-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="contact-page__left">
+                            <div class="section-title text-left">
+                                <span class="section-title__tagline">Contact with us</span>
+                                <h2 class="section-title__title">Get in Touch With us</h2>
+                            </div>
+                            <p class="contact-page__text">
+                                Have questions, ideas, or want to make a difference? We’d love to hear from you! Whether you’re looking to volunteer, donate, or simply learn more about our mission, our team is here to help. Reach out today and let’s work together to create lasting impact.
+                            </p>
+                            <div class="contact-page__social">
+                                <a href="{{ config('data.twitter') }}"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ config('data.facebook') }}"><i class="fab fa-facebook"></i></a>
+                                <a href="{{ config('data.instagram') }}"><i class="fab fa-instagram"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="single-contact-info">
-                        <div class="icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="info-wrapper">
-                            <span>Work with us</span>
-                            <a href="#">{{ config('data.email') }}</a>
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="contact-page__right">
+                            <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated"
+                                novalidate="novalidate">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Your Name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Phone Number" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <select name="subject">
+                                                <option value="">Subject</option>
+                                                <option value="query about donation">Query about Donation</option>
+                                                <option value="want be a volunteer">Want be a volunteer</option>
+                                            </select><!-- /# -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="comment-form__input-box text-message-box">
+                                            <textarea name="message" placeholder="Write a Comment"></textarea>
+                                        </div>
+                                        <div class="comment-form__btn-box">
+                                            <button type="submit" class="thm-btn comment-form__btn">Send us a
+                                                message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="single-contact-info">
-                        <div class="icon">
-                            <i class="fa-solid fa-location-dot"></i>
+                </div>
+            </div>
+        </section>
+        <!--Contact Page End-->
+
+        <!--Contact Info Start-->
+        <section class="contact-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Contact Info Single-->
+                        <div class="contact-info__single">
+                            <h4 class="contact-info__title">About</h4>
+                            <p class="contact-info__text">{{ substr(config('data.footer_about'), 0, 70) }}</p>
                         </div>
-                        <div class="info-wrapper">
-                            <span>Our Location</span>
-                            <a href="#">{{ config('data.address') }}</a>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Contact Info Single-->
+                        <div class="contact-info__single contact-info__single-2">
+                            <h4 class="contact-info__title">Address</h4>
+                            <p class="contact-info__text">{{ config('data.address') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Contact Info Single-->
+                        <div class="contact-info__single contact-info__single-3">
+                            <h4 class="contact-info__title">Contact</h4>
+                            <p class="contact-info__email-phone">
+                                <a href="mailto:{{ config('data.email') }}"
+                                    class="contact-info__email">{{ config('data.email') }}</a>
+                                <a href="tel:{{ config('data.phone1') }}" class="contact-info__phone">{{ config('data.phone1') }}</a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="contact-form-p new">
-                    <form class="form__content" method="post" action="mailer.php" id="contact-form">
-                        <h4 class="title">Get In Touch</h4>
-                        <input name="name" id="name" type="text" placeholder="Your Name">
-                        <input type="email" name="email" id="email" placeholder="Johndoe@gmail.com">
-                        <textarea name="message" id="message" placeholder="Message"></textarea>
+        </section>
+        <!--Contact Info End-->
 
-                        <div id="form-messages"></div>
-                        <button class="rts-btn btn-primary" type="submit">Get In Touch</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- contact areas main end -->
+        <!--Contact page Google Map Start-->
+        <section class="contact-page-google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3964.7259649719144!2d7.521318826207445!3d6.429240293561847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sNo.%2054%20Federal%20College%20Road%2C%20Independence%20Layout%20by%20ESBS%2C%20Enugu!5e0!3m2!1sen!2sng!4v1755953095759!5m2!1sen!2sng" style="border:0; width: 100%; height: 600px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<!-- map area start -->
-<div class="google-map-area rts-section-gapTop">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="google-map">
-                    @include('frontend.theme1.component.general.map')
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- map area end -->
+        </section>
+        <!--Google Map End-->
 
- @endsection
+
+
+
+
+
+@endsection

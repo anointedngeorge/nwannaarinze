@@ -21,38 +21,64 @@ class navigationProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer('*', function ($view) {
-            $view->with('navigationProvider', (object) [
-                (object) [
+            $pages = [
+                [
                     'title' => 'Home',
-                    'url' => route('frontend.index', ['q' => '#']),
+                    'url'   => route('frontend.index'),
                     'show_on_footer' => true,
-                    'show_on_header' => true
+                    'show_on_header' => true,
+                    'active_check'   => fn() => request()->is('/') && request()->uri() == '',
                 ],
-                (object) [
+                [
                     'title' => 'About',
-                    'url' => route('frontend.index', ['q' => 'about']),
+                    'url'   => route('frontend.index', ['q' => 'about']),
                     'show_on_footer' => true,
-                    'show_on_header' => true
+                    'show_on_header' => true,
+                    'active_check'   => fn() => request()->query('q') === 'about',
                 ],
-                (object) [
-                    'title' => 'Gallery',
-                    'url' => route('frontend.index', ['q' => 'gallery']),
+                [
+                    'title' => 'Events',
+                    'url'   => route('frontend.index', ['q' => 'events']),
                     'show_on_footer' => true,
-                    'show_on_header' => true
+                    'show_on_header' => true,
+                    'active_check'   => fn() => request()->query('q') === 'events',
                 ],
-                (object) [
-                    'title' => 'Carrier',
-                    'url' => route('frontend.index', ['q' => 'carrier']),
+                [
+                    'title' => 'Volunteer',
+                    'url'   => route('frontend.index', ['q' => 'volunteer']),
                     'show_on_footer' => true,
-                    'show_on_header' => false
+                    'show_on_header' => true,
+                    'active_check'   => fn() => request()->query('q') === 'volunteer',
                 ],
-                (object) [
+                [
+                    'title' => 'Partnership',
+                    'url'   => route('frontend.index', ['q' => 'partnership']),
+                    'show_on_footer' => true,
+                    'show_on_header' => true,
+                    'active_check'   => fn() => request()->query('q') === 'partnership',
+                ],
+
+                
+                [
                     'title' => 'Contact',
-                    'url' => route('frontend.index', ['q' => 'contact']),
+                    'url'   => route('frontend.index', ['q' => 'contact']),
                     'show_on_footer' => false,
-                    'show_on_header' => true
+                    'show_on_header' => true,
+                    'active_check'   => fn() => request()->query('q') === 'contact',
                 ],
-            ]);
+            ];
+            
+            $navigationProvider = collect($pages)->map(function ($page) {
+                return (object) [
+                    'title'          => $page['title'],
+                    'url'            => $page['url'],
+                    'show_on_footer' => $page['show_on_footer'],
+                    'show_on_header' => $page['show_on_header'],
+                    'current'        => call_user_func($page['active_check']),
+                ];
+            });
+            
+            $view->with('navigationProvider', $navigationProvider);
         });
     }
 }

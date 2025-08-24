@@ -638,7 +638,7 @@
 							{{-- @include("dashboards.admin1.notifications.favourite") --}}
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                                    <img src="{{ asset(config('data.logo')) }}" alt="">
+                                    <img src="{{ asset(config('data.footer_logo')) }}" alt="">
 									<div class="header-info ms-3">
 										<span>{{ auth()->user()->name }}</span>
 										<small>
