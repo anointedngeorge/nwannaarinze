@@ -29,13 +29,13 @@ class navigationProvider extends ServiceProvider
                     'show_on_header' => true,
                     'active_check'   => fn() => request()->is('/') && request()->uri() == '',
                 ],
-                [
-                    'title' => 'About',
-                    'url'   => route('frontend.index', ['q' => 'about']),
-                    'show_on_footer' => true,
-                    'show_on_header' => true,
-                    'active_check'   => fn() => request()->query('q') === 'about',
-                ],
+                // [
+                //     'title' => 'About',
+                //     'url'   => route('frontend.index', ['q' => 'about']),
+                //     'show_on_footer' => true,
+                //     'show_on_header' => true,
+                //     'active_check'   => fn() => request()->query('q') === 'about',
+                // ],
                 [
                     'title' => 'Events',
                     'url'   => route('frontend.index', ['q' => 'events']),

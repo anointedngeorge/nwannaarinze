@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreContactsRequest;
 use App\Http\Requests\StorePartnershipRequest;
 use App\Http\Requests\StoreVolunteersRequest;
+use App\Models\Contacts;
 use App\Models\Media;
 use App\Models\Partnership;
 use App\Models\Volunteers;
@@ -119,5 +121,19 @@ class FrontendController extends Controller
 
         return to_route('frontend.index');
     }
+
+    public function contacts(StoreContactsRequest $request)
+    {
+        $data = $request->validated();
+
+        Contacts::create($data);
+
+        session()->flash('type', 'success');
+        session()->flash('message', "Dear {$data['name']}, we'll get back to you shortly .");
+
+        return to_route('frontend.index');
+    }
+
+
 
 }

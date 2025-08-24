@@ -80,7 +80,7 @@
                                 <a href="#" class="main-header-two__search search-toggler icon-magnifying-glass"></a> 
                                 <a href="{{ route('login') }}"
                                     class="main-header-two__cart icon-avatar mini-cart__toggler"></a>
-                                <a href="{{ route('frontend.index', ['q' => 'donate']) }}"
+                                <a href="{{ route('frontend.index', ['q' => 'partnership']) }}"
                                     class="donate-btn main-header-two__btn"> <i class="fa fa-heart"></i> Donate Now</a>
                             </div>
                         </div>

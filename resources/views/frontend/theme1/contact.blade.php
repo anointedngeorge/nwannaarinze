@@ -40,30 +40,31 @@
                     </div>
                     <div class="col-xl-8 col-lg-7">
                         <div class="contact-page__right">
-                            <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated"
-                                novalidate="novalidate">
+                            <form method="POST" action="{{ route('frontend.contacts') }}" class="comment-one__form">
+                                @csrf
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">
-                                            <input type="text" placeholder="Your Name" name="name">
+                                            <input required type="text" placeholder="Your Name" name="name">
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
+                                            <input required type="email" placeholder="Email Address" name="email">
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">
-                                            <input type="text" placeholder="Phone Number" name="phone">
+                                            <input required  type="text" placeholder="Phone Number" name="phone">
                                         </div>
                                     </div>
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">
-                                            <select name="subject">
+                                            <select name="subject" required>
                                                 <option value="">Subject</option>
-                                                <option value="query about donation">Query about Donation</option>
-                                                <option value="want be a volunteer">Want be a volunteer</option>
+                                                <option value="donation">Donation</option>
+                                                <option value="volunteer">Volunteer</option>
+                                                <option value="partnership">Partnership</option>
                                             </select><!-- /# -->
                                         </div>
                                     </div>
@@ -71,7 +72,7 @@
                                 <div class="row">
                                     <div class="col-xl-12">
                                         <div class="comment-form__input-box text-message-box">
-                                            <textarea name="message" placeholder="Write a Comment"></textarea>
+                                            <textarea name="content" placeholder="Write a Comment"></textarea>
                                         </div>
                                         <div class="comment-form__btn-box">
                                             <button type="submit" class="thm-btn comment-form__btn">Send us a

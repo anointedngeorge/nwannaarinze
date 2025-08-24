@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\MediaController;
@@ -28,6 +29,7 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
     Route::resource('/partners', PartnershipController::class);
     Route::resource('/media', MediaController::class);
     Route::resource('/setting', SettingsController::class);
+    Route::resource('/contacts', ContactsController::class);
 
     // 
     
@@ -44,6 +46,7 @@ Route::name('frontend.')
         Route::get('/', 'index')->name('index');
         Route::post('/volunteer', 'register_volunteer')->name('volunteer');
         Route::post('/partners', 'register_partnership')->name('partners');
+        Route::post('/contact', 'contacts')->name('contacts');
     });
 
 
