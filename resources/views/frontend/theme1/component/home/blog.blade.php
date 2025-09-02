@@ -1,7 +1,6 @@
 <?php
 
-$items = isset($frontendData) && isset($frontendData->blogs)
-    ? $frontendData->blogs
+$items = !empty($frontendData->blogs) ? $frontendData->blogs
     : [
         [
             'image' => "assets/images/image2/afcc.webp",
