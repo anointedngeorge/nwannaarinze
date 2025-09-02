@@ -44,7 +44,7 @@
                         <div class="causes-one__single">
                             <div class="volunteers-one__single">
                                 <div class="volunteers-one__img">
-                                    <img src="{{ $item['image'] }}" alt="{{ $item['name'] }}"
+                                    <img src="{{ asset($item['image']) }}" alt="{{ $item['name'] }}"
                                         style="width:100%; height: 400px;">
                                     <div class="volunteers-one__social">
                                         <a href="#"><i class="fab fa-twitter"></i></a>
