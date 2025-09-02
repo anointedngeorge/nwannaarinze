@@ -1,27 +1,28 @@
 <?php
-print_r($frontendData->blogs);
-$items =   [
-    [
-        'image' => "assets/images/image2/afcc.webp",
-        'date' => "26 oct",
-        'title' => "Fake Charity: EFCC arrests 2 men over N21m fraud in Kaduna",
-        'content' => "The Kaduna Zonal Command of the Economic and Financial Crimes Commission has arrested the duo of Michael Yusuf Michael and Martha Daniel, promoters of MYM123CARE for allegedly obtaining money by false pretence. ADVERTISING Their arrest followed a petition alleging that the suspects on the pr",
-    ],
 
-    [
-        'image' => "assets/images/image2/efcc.webp",
-        'date' => "27 sept",
-        'title' => "EFCC remands man in prison over N55m medical charity scam",
-        'content' => "The Kaduna Zonal Command of the Economic and Financial Crimes Commission has arraigned the duo of Michael Yusuf Michael and Martha Daniel Yusuf, both siblings, before Justice Hannnatu A.L Balogun on an eight-count charge bordering on obtaining by false pretence. The defendants allegedly floate"
-    ],
+$items = isset($frontendData) && isset($frontendData->blogs)
+    ? $frontendData->blogs
+    : [
+        [
+            'image' => "assets/images/image2/afcc.webp",
+            'date' => "26 oct",
+            'title' => "Fake Charity: EFCC arrests 2 men over N21m fraud in Kaduna",
+            'content' => "The Kaduna Zonal Command of the Economic and Financial Crimes Commission has arrested the duo of Michael Yusuf Michael and Martha Daniel, promoters of MYM123CARE for allegedly obtaining money by false pretence. ADVERTISING Their arrest followed a petition alleging that the suspects on the pr",
+        ],
+        [
+            'image' => "assets/images/image2/efcc.webp",
+            'date' => "27 sept",
+            'title' => "EFCC remands man in prison over N55m medical charity scam",
+            'content' => "The Kaduna Zonal Command of the Economic and Financial Crimes Commission has arraigned the duo of Michael Yusuf Michael and Martha Daniel Yusuf, both siblings, before Justice Hannnatu A.L Balogun on an eight-count charge bordering on obtaining by false pretence. The defendants allegedly floate"
+        ],
+        [
+            'image' => "assets/images/image2/800ht.jpg",
+            'date' => "30 dec",
+            'title' => "Nwanna Arinze foundation empowers school children in Enugu",
+            'content' => "The programme which was tagged back to school project distributed learning materials to tje kids. speaking at the event, the president and founder Mr Arinze Nwanna who was represented by the oriject manager Mr Ogbenjuwa Moses urged the children to be of good behaviours"
+        ],
+    ];
 
-    [
-        'image' => "assets/images/image2/800ht.jpg",
-        'date' => "30 dec",
-        'title' => "Nwanna Arinze foundation empowers school children in Enugu",
-        'content' => "The programme which was tagged back to school project distributed learning materials to tje kids. speaking at the event, the president and founder Mr Arinze Nwanna who was represented by the oriject manager Mr Ogbenjuwa Moses urged the children to be of good behaviours"
-    ],
-];
 
 ?>
 
