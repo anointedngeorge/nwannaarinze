@@ -1,7 +1,7 @@
 <!--Cause Two End-->
 <?php 
     
-    $items = $frontendData->partners ?? [
+    $items = !empty($frontendData->partners) ? $frontendData->partners : [
     [
         'image' => 'assets/images/image2/ifeoma.jpg',
         'tag' => 'Volunteer',

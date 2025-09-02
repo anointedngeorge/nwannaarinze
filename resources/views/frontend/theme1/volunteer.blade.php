@@ -10,7 +10,7 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/images/images/page-header-bg.jpg)">
+            <div class="page-header-bg" style="background-image: url({{ asset('assets/images/images/page-header-bg.jpg') }})">
             </div>
             <div class="container">
                 <div class="page-header__inner">
@@ -37,12 +37,12 @@
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                         <div class="become-volunteer__img-single">
-                                            <img src="assets/images/images/become-volunteer-img-1.jpg" alt="">
+                                            <img src="{{ asset('assets/images/images/become-volunteer-img-1.jpg') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6">
                                         <div class="become-volunteer__img-single">
-                                            <img src="assets/images/images/become-volunteer-img-2.jpg" alt="">
+                                            <img src="{{ asset('assets/images/images/become-volunteer-img-2.jpg') }}" alt="">
                                         </div>
                                     </div>
                                 </div>
