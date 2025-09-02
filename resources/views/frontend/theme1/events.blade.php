@@ -7,7 +7,7 @@
 
 @section('content')
 @php
-    $items = $frontendData->events ?? [
+    $items =!empty($frontendData->events) ? $frontendData->events : [
         [
             'title' => 'Hand for Children',
             'content' => '',
@@ -69,7 +69,7 @@
                         <!--Events Single-->
                         <div class="events__single">
                             <div class="events__img">
-                                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}">
+                                <img src="{{ asset($item['image']) }}" alt="{{ $item['title'] }}">
                                 <div class="events__date">
                                     <p>{{ $item['start'] }}</p>
                                 </div>
