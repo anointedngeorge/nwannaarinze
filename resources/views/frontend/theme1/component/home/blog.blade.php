@@ -39,7 +39,7 @@ $items = $frontendData->blogs ?? [
                 <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
                     <div class="blog-one__single">
                         <div class="blog-one__img">
-                            <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" style="width: 100%; height: 300px;">
+                            <img src="{{ asset($item['image']) }}" alt="{{ $item['title'] }}" style="width: 100%; height: 300px;">
                             <div class="blog-one__date">
                                 <p>{{ $item['date'] }}</p>
                             </div>

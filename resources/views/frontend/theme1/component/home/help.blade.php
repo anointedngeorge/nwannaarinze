@@ -20,31 +20,31 @@
                         <div class="help-people__map"
                             style="background-image: url(assets/images/shapes/help-people-map.png);"></div>
                         <div class="help-people__img">
-                            <img src="assets/images/resources/help-people-img-1.jpg" class="zoom-fade" alt="">
+                            <img src="{{ asset('assets/images/resources/help-people-img-1.jpg') }}" class="zoom-fade" alt="">
                         </div>
                         <div class="help-people__img help-people__img-2">
-                            <img src="assets/images/resources/help-people-img-2.jpg" class="zoom-fade" alt="">
+                            <img src="{{ asset('assets/images/resources/help-people-img-2.jpg') }}" class="zoom-fade" alt="">
                         </div>
                         <div class="help-people__img help-people__img-3">
-                            <img src="assets/images/resources/help-people-img-3.jpg" class="zoom-fade" alt="">
+                            <img src="{{ asset('assets/images/resources/help-people-img-3.jpg') }}" class="zoom-fade" alt="">
                         </div>
                         <div class="help-people__img help-people__img-4">
-                            <img src="assets/images/resources/help-people-img-4.jpg" class="zoom-fade" alt="">
+                            <img src="{{ asset('assets/images/resources/help-people-img-4.jpg') }}" class="zoom-fade" alt="">
                         </div>
                         <div class="help-people__img help-people__img-5">
-                            <img src="assets/images/resources/help-people-img-5.jpg" class="zoom-fade" alt="">
+                            <img src="{{ asset('assets/images/resources/help-people-img-5.jpg') }}" class="zoom-fade" alt="">
                         </div>
                         <div class="help-people__icon-1">
-                            <img src="assets/images/icon/help-people-icon-1.png" alt="">
+                            <img src="{{ asset('assets/images/icon/help-people-icon-1.png') }}" alt="">
                         </div>
                         <div class="help-people__icon-2">
-                            <img src="assets/images/icon/help-people-icon-2.png" alt="">
+                            <img src="{{ asset('assets/images/icon/help-people-icon-2.png') }}" alt="">
                         </div>
                         <div class="help-people__icon-3">
-                            <img src="assets/images/icon/help-people-icon-3.png" alt="">
+                            <img src="{{ asset('assets/images/icon/help-people-icon-3.png') }}" alt="">
                         </div>
                         <div class="help-people__icon-4">
-                            <img src="assets/images/icon/help-people-icon-4.png" alt="">
+                            <img src="{{ asset('assets/images/icon/help-people-icon-4.png') }}" alt="">
                         </div>
                     </div>
                 </div>

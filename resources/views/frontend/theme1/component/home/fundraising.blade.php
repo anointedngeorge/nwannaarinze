@@ -2,7 +2,7 @@
 <section class="fundraishing">
     <div class="fundraishing-bg-box">
         <div class="fundraishing-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-            style="background-image: url(assets/images/images/main-slider-2-1.jpg);"></div>
+            style="background-image: url({{ asset('assets/images/images/main-slider-2-1.jpg') }});"></div>
     </div>
     <div class="container">
         <div class="row">

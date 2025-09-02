@@ -43,7 +43,7 @@
                     @foreach ($items as $item)
                         <div class="causes-one__single">
                             <div class="causes-one__img">
-                                <img src="{{ $item->image }}" alt="{{ $item->title }}" style="width: 100%; height: 250px;">
+                                <img src="{{ asset($item->image) }}" alt="{{ $item->title }}" style="width: 100%; height: 250px;">
                                 <div class="causes-one__category">
                                     <span>{{ $item->tag }}</span>
                                 </div>

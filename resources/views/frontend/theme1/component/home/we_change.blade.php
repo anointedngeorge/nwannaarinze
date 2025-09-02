@@ -2,7 +2,7 @@
 <section class="we-change">
     <div class="we-change-bg-box">
         <div class="we-change-bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-            style="background-image: url(assets/images/image2/res1.jpg);"></div>
+            style="background-image: url({{ asset('assets/images/image2/res1.jpg') }});"></div>
     </div>
     <div class="container">
         <div class="row">

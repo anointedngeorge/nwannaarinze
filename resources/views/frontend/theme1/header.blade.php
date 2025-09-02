@@ -51,7 +51,7 @@
 
 <body>
     <div class="preloader">
-        <img class="preloader__image" width="150" src="{{ config('data.footer_logo') }}" alt="logo" />
+        <img class="preloader__image" width="150" src="{{ asset(config('data.footer_logo')) }}" alt="logo" />
     </div>
     <!-- /.preloader -->
     <div class="page-wrapper">

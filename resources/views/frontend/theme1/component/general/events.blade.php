@@ -70,7 +70,7 @@
                     <!--Events Single-->
                     <div class="events__single">
                         <div class="events__img">
-                            <img src="{{ $item['image'] }}" alt="">
+                            <img src="{{ asset($item['image']) }}" alt="">
                             <div class="events__date">
                                 <p>20 <br> oct</p>
                             </div>

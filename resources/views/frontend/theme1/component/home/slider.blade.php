@@ -17,7 +17,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="image-layer"
-                    style="background-image: url(assets/images/images/main-slider-2-1.jpg);">
+                    style="background-image: url({{ asset('assets/images/images/main-slider-2-1.jpg') }});">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">

@@ -1,6 +1,6 @@
 <!--Site Footer Start-->
 <footer class="site-footer">
-    <div class="site-footer-bg" style="background-image: url(assets/images/images/site-footer-bg.jpg);">
+    <div class="site-footer-bg" style="background-image: url({{ asset('assets/images/images/site-footer-bg.jpg') }});">
     </div>
     <div class="site-footer__top">
         <div class="container">
@@ -53,7 +53,7 @@
                                     <span class="icon-email"></span>
                                 </div>
                                 <div class="text">
-                                    <a href="mailto:needhelp@company.com">{{ config('data.email') }}</a>
+                                    <a href="mailto:{{ config('data.email') }}">{{ config('data.email') }}</a>
                                 </div>
                             </li>
                             <li>
@@ -61,7 +61,7 @@
                                     <span class="icon-telephone"></span>
                                 </div>
                                 <div class="text">
-                                    <a href="tel:307760608"> {{ config('data.phone1') }}</a>
+                                    <a href="tel:{{ config('data.phone1') }}"> {{ config('data.phone1') }}</a>
                                 </div>
                             </li>
                             <li>

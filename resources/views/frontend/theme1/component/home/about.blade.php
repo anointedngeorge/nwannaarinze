@@ -6,17 +6,17 @@
                 <div class="about-one__left">
                     <div class="about-one__img wow slideInLeft" data-wow-delay="100ms"
                         data-wow-duration="2500ms">
-                        <img src="assets/images/image2/use.jpg" alt="">
+                        <img src="{{ asset('assets/images/image2/use.jpg') }}" alt="">
                         <div class="about-one__badge">
-                            <img src="assets/images/logos/logo1.png" alt="" style="width: 100%; height: 100%;">
+                            <img src="{{ asset('assets/images/logos/logo1.png') }}" alt="" style="width: 100%; height: 100%;">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xl-6">
                 <div class="about-one__right">
-                    <div class="about-one-shape float-bob-y"><img src="assets/images/shapes/about-one-shape.png"
-                            alt=""></div>
+                    <div class="about-one-shape float-bob-y"><img src="{{ asset('assets/images/shapes/about-one-shape.png') }}"
+                            alt="..."></div>
                     <div class="section-title text-left">
                         <span class="section-title__tagline">Welcome to Nwanna Arinze Fundation</span>
                         <h2 class="section-title__title">We're dedicated to improving lives</h2>

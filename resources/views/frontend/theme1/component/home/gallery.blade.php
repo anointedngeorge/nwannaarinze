@@ -24,7 +24,7 @@
                         </div>
                         <div class="gallery-one__img-overly">
                             <div class="gallery-one__icon-bg">
-                                <img src="assets/images/shapes/gallery-shape.png" alt="">
+                                <img src="{{ asset('assets/images/shapes/gallery-shape.png') }}" alt="">
                             </div>
                             <a class="img-popup" href="{{ asset($item) }}">
                                 <i class="fab fa-instagram"></i>
