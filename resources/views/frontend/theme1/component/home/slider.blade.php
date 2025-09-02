@@ -28,7 +28,7 @@
                                 <p>We are here to support you every step of the way</p>
                                 <a href="about.html" class="thm-btn">Discover More</a>
                                 <div class="main-slider-two-map">
-                                    <img src="assets/images/shapes/main-slider-two-map.png" alt="">
+                                    <img src="{{ asset('assets/images/shapes/main-slider-two-map.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="image-layer"
-                    style="background-image: url(assets/images/images/main-slider-2-2.jpg);">
+                    style="background-image: url({{ asset('assets/images/images/main-slider-2-2.jpg') }});">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
@@ -48,7 +48,7 @@
                                 <p>We are here to support you every step of the way</p>
                                 <a href="about.html" class="thm-btn">Discover More</a>
                                 <div class="main-slider-two-map">
-                                    <img src="assets/images/shapes/main-slider-two-map.png" alt="">
+                                    <img src="{{ asset('assets/images/shapes/main-slider-two-map.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="image-layer"
-                    style="background-image: url(assets/images/image2/res1.jpg);">
+                    style="background-image: url({{ asset('assets/images/image2/res1.jpg') }});">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
@@ -68,7 +68,7 @@
                                 <p>We are here to support you every step of the way</p>
                                 <a href="about.html" class="thm-btn">Discover More</a>
                                 <div class="main-slider-two-map">
-                                    <img src="assets/images/shapes/main-slider-two-map.png" alt="">
+                                    <img src="{{ asset('assets/images/shapes/main-slider-two-map.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
