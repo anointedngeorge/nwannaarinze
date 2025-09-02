@@ -3,7 +3,7 @@
  
     $items = (object) [
     (object) [
-        'image' => 'assets/images/image2/r.jpg',
+        'image' => 'assets/images/image2/R.jpg',
         'tag' => 'School Projects',
         'title' => 'Back To School',
         'content' => "We help parents with school materials and tuition fees in ensuring education for every child.",
