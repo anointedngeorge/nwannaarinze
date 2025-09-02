@@ -31,7 +31,7 @@
 
                             </div>
                             <div class="we-change__counter-content">
-                                <h3 class="odomete" data-count="4850">N2M</h3>
+                                <h3 class="odomete" data-count="4850">10M+</h3>
                                 <p class="we-change__counter-text">Fund Raised</p>
                             </div>
                         </li>
@@ -43,7 +43,7 @@
                             </div>
                             
                             <div class="we-change__counter-content">
-                                <h3 class="odometer" data-count="50">00</h3>
+                                <h3 class="odometer" data-count="30">00</h3>
                                 <p class="we-change__counter-text">Donation</p>
                             </div>
                         </li>
@@ -52,7 +52,7 @@
                                 <span class="icon-social-campaign"></span>
                             </div>
                             <div class="we-change__counter-content">
-                                <h3 class="odometer" data-count="3">00</h3>
+                                <h3 class="odometer" data-count="5">00</h3>
                                 <p class="we-change__counter-text">Completed Project</p>
                             </div>
                         </li>
