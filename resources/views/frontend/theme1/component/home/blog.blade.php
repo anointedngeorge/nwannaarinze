@@ -1,6 +1,6 @@
 <?php
 
-$items = [
+$items = $frontendData->blogs || [
     [
         'image' => "assets/images/image2/afcc.webp",
         'date' => "26 oct",
