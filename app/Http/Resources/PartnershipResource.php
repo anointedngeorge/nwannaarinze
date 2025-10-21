@@ -21,7 +21,9 @@ class PartnershipResource extends JsonResource
             'phone'      => $this->phone,
             'email'      => $this->email,
             'occupation' => $this->occupation,
-            'dob'        => $this->dob ? \Carbon\Carbon::parse($this->dob)->format('Y-m-d') : null,
+            // 'dob'        => $this->dob ? \Carbon\Carbon::parse($this->dob)->format('Y-m-d') : null,
+            'dob'        => $this->dob ,
+
             'tag'        => $this->tag,
             'address'    => $this->address,
             'content'    => $this->content,

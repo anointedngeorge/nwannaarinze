@@ -64,7 +64,7 @@
                             </div>
                             
                             <div class="we-change__counter-content">
-                                <h3 class="odometer" data-count="30">00</h3>
+                                <h3 class="odometer" data-count="20">00</h3>
                                 <p class="we-change__counter-text">Volunteers</p>
                             </div>
                         </li>
