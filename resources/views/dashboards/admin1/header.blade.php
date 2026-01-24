@@ -74,7 +74,7 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="index.html" class="brand-logo">
+            <a href="{{ route("dashboard") }}" class="brand-logo">
 				<svg class="logo-abbr" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0)">
 					<rect class="rect-primary-rect" width="80" height="80" rx="16" fill="#1362FC"/>
