@@ -38,6 +38,10 @@
     @include('frontend.theme1.component.home.we_change')
     <!--We Change End-->
 
+    {{-- donation --}}
+    @include('frontend.theme1.component.home.donations')
+    {{-- end of donation --}}
+
     <!--Brand Two Start-->
     {{-- @include('frontend.theme1.component.home.brand') --}}
     <!--Brand Two End-->

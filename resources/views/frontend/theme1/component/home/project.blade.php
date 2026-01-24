@@ -55,17 +55,17 @@
                                     </h3>
                                     <p class="causes-one__text">{{ $item->content }}</p>
                                 </div>
-                                <div class="causes-one__progress causes-one__progress-2">
+                                {{-- <div class="causes-one__progress causes-one__progress-2">
                                     <div class="bar">
                                         <div class="bar-inner count-bar" data-percent="36%">
                                             <div class="count-text">36%</div>
                                         </div>
                                     </div>
-                                    {{-- <div class="causes-one__goals">
+                                    <div class="causes-one__goals">
                                         <p><span>$25,270</span> Raised</p>
                                         <p><span>$30,000</span> Goal</p>
-                                    </div> --}}
-                                </div>
+                                    </div>
+                                </div> --}}
                             </div>
                         </div>
                         <!--Cause One Single-->

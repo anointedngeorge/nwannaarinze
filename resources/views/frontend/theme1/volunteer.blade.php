@@ -112,7 +112,7 @@
                                             <textarea name="content" placeholder="Write a Comment"></textarea>
                                         </div>
                                         <div class="become-volunteer__btn-box">
-                                            <button type="submit" class="thm-btn become-volunteer__btn">Send us a
+                                            <button disabled type="submit" class="thm-btn become-volunteer__btn">Send us a
                                                 message</button>
                                         </div>
                                     </div>

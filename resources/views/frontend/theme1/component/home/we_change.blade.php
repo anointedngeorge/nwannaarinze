@@ -21,56 +21,7 @@
                         Lives</h3>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4">
-                <div class="we-change__right">
-                    <ul class="we-change__counter list-unstyled">
-                        <li class="we-change__counter-single wow fadeInUp" data-wow-delay="100ms">
-                            <div class="we-change__counter-icon">
-                                {{-- <span class="icon-campaign"></span> --}}
-                                <span class="icon-social-campaign"></span>
-
-                            </div>
-                            <div class="we-change__counter-content">
-                                <h3 class="odomete" data-count="4850">10M+</h3>
-                                <p class="we-change__counter-text">Fund Raised</p>
-                            </div>
-                        </li>
-                        <li class="we-change__counter-single wow fadeInUp" data-wow-delay="300ms">
-                            <div class="we-change__counter-icon we-change__counter-icon-clr-secondary">
-                                {{-- <span class="icon-help"></span> --}}
-                                <span class="icon-social-campaign"></span>
-
-                            </div>
-                            
-                            <div class="we-change__counter-content">
-                                <h3 class="odometer" data-count="30">00</h3>
-                                <p class="we-change__counter-text">Donation</p>
-                            </div>
-                        </li>
-                        <li class="we-change__counter-single wow fadeInUp" data-wow-delay="200ms">
-                            <div class="we-change__counter-icon we-change__counter-icon-clr-extra">
-                                <span class="icon-social-campaign"></span>
-                            </div>
-                            <div class="we-change__counter-content">
-                                <h3 class="odometer" data-count="5">00</h3>
-                                <p class="we-change__counter-text">Completed Project</p>
-                            </div>
-                        </li>
-                        <li class="we-change__counter-single wow fadeInUp" data-wow-delay="300ms">
-                            <div class="we-change__counter-icon we-change__counter-icon-clr-secondary">
-                                {{-- <span class="icon-help"></span> --}}
-                                <span class="icon-social-campaign"></span>
-
-                            </div>
-                            
-                            <div class="we-change__counter-content">
-                                <h3 class="odometer" data-count="20">00</h3>
-                                <p class="we-change__counter-text">Volunteers</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            
         </div>
     </div>
 </section>

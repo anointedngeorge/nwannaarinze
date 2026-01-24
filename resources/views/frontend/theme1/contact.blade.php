@@ -75,7 +75,7 @@
                                             <textarea name="content" placeholder="Write a Comment"></textarea>
                                         </div>
                                         <div class="comment-form__btn-box">
-                                            <button type="submit" class="thm-btn comment-form__btn">Send us a
+                                            <button disabled type="submit" class="thm-btn comment-form__btn">Send us a
                                                 message</button>
                                         </div>
                                     </div>
