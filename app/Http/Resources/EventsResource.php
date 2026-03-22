@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class EventsResource extends JsonResource
 {
+    // protected static $mixed;
     /**
      * Transform the resource into an array.
      *
@@ -17,6 +18,7 @@ class EventsResource extends JsonResource
     {
         // return parent::toArray($request);
         return  [
+            'id' => $this->id,
             'title' => $this->title,
             'content' => $this->content,
             'start' => $this->start,
@@ -25,6 +27,9 @@ class EventsResource extends JsonResource
             'date' => $this->date,
             'image'  => Storage::url($this->image),
             'time' => $this->time,
+            'can_register' => $this->can_register,
+
+
         ];
     }
 }

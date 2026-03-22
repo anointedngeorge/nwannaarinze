@@ -47,7 +47,7 @@
                                     </div> --}}
                                 </div>
                             </div>
-                            <div class="become-volunteer__content">
+                            {{-- <div class="become-volunteer__content">
                                 <h3 class="become-volunteer__title">Requirements</h3>
                                 <p class="become-volunteer__text">To become a partner, you’ll need to meet the following criteria:</p>
                                 <ul class="list-unstyled become-volunteer__points">
@@ -64,7 +64,7 @@
                                             class="become-volunteer__email">{{ config('data.email') }}</a>
                                     </p>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6">

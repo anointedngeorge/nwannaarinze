@@ -25,6 +25,14 @@
         <input type="text" name="address" class="form-control input-default" placeholder="Event Address" required>
     </div>
 
+    <div class="mb-3"> 
+         <label>Can Register</label>
+         <select name="can_register" id="">
+            <option  value="{{ 1 }}">Yes</option>
+            <option  value="{{ 0 }}">No</option>
+        </select>
+    </div>
+
     <div class="mb-3">
         <label>Event Description</label>
         <textarea name="content" class="form-control"></textarea>

@@ -29,6 +29,7 @@ class StoreMEventsRequest extends FormRequest
             'address' => ['string', 'required'],
             'date' => ['string', 'nullable'],
             'time' => ['string', 'required'],
+            'can_register' => ['boolean'],
             'image'  => ['image', 'required', 'mimes:jpeg,png,jpg,gif', 'max:2048']
         ];
     }

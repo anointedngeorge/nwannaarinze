@@ -14,23 +14,23 @@
         <div class="row page-titles">
             <div class="col-md-6 col-sm-12">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">Events</a></li>
-                    <li class="breadcrumb-item  active"><a href="javascript:void(0)">Events Listing</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">Event Registration</a></li>
+                    <li class="breadcrumb-item  active"><a href="javascript:void(0)">Event Registration Listing</a></li>
                 </ol>
             </div>
 
-            <div class="col-md-6 col-sm-12 text-right">
+            {{-- <div class="col-md-6 col-sm-12 text-right">
                 <button 
                     type="button" 
                     class="btn btn-primary btn-xs mb-2" 
                     onclick="loadModalPage();" 
                     data-bs-toggle="modal" 
                     data-bs-target="#pagemodal"
-                    data-page="{{ route('events.create') }}"
-                    data-title="Create New Events"
-                    >Create New Event
+                    data-page="{{ route('volunteer.create') }}"
+                    data-title="Add New Volunteer"
+                    >Add New Volunteer
                 </button>
-            </div>
+            </div> --}}
         </div>
         <!-- row -->
 
@@ -59,24 +59,24 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Image</th>
-                                        <th>Title</th>
-                                        <th>Registration Count</th>
+                                        <th>Event Handler</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
                                         <th>Action </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($results as $result) 
+                                    @foreach ($results as $result)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $result->event }}
+                                            <td>{{$result->name}}</td>
                                             <td>
-                                                <img width="50" height="50" src="/storage/{{ $result->image }}" alt="{{ $result->title }}">
+                                                {{ $result->email }}
                                             </td>
                                             <td>
-                                               {{ $result->title }}
-                                            </td>
-                                            <td>
-                                                {{ $result->getTotalRegistration() }}
+                                                {{ $result->phone }}
                                             </td>
                                             <td>
                                                 <table>
@@ -89,30 +89,15 @@
                                                             onclick="loadModalPage();" 
                                                             data-bs-toggle="modal" 
                                                             data-bs-target="#pagemodal"
-                                                            data-page="{{ route('events.edit', ['event'=>$result->id]) }}"
-                                                            data-title="Edit  {{ $result->title }}"
+                                                            data-page="{{ route('volunteer.edit', ['volunteer'=>$result->id]) }}"
+                                                            data-title="Edit {{ $result->name }}"
                                                             >
                                                             Edit
                                                         </button>
 
                                                         </td>
                                                         <td>
-                                                            
-                                                            <button 
-                                                            type="button" 
-                                                            class="btn btn-primary btn-xs mb-2" 
-                                                            onclick="loadModalPage();" 
-                                                            data-bs-toggle="modal" 
-                                                            data-bs-target="#pagemodal"
-                                                            data-page="{{ route('events.participant', ['event'=>$result->id]) }}"
-                                                            data-title="{{ $result->title }}"
-                                                            >
-                                                            View Participants
-                                                        </button>
-
-                                                        </td>
-                                                        <td>
-                                                            <form action="{{ route('events.destroy', ['event'=> $result->id]) }}" method="post">
+                                                            <form action="{{ route('volunteer.destroy', ['volunteer'=> $result->id]) }}" method="post">
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <button class="btn btn-link ">Remove</button>

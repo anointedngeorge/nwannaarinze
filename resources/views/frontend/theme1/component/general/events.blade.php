@@ -1,6 +1,7 @@
 @php
     $items = $frontendData->events ?? [
         [
+            'id' =>1,
             'title' => 'Hand for Children',
             'content' => '',
             'start' => '',
@@ -11,6 +12,7 @@
             'time' => '4:00pm 6:00pm'
         ],
         [
+            'id' => 2,
             'title' => 'Hand for Children',
             'content' => '',
             'start' => '',
@@ -31,7 +33,8 @@
             'image' => 'assets/images/resources/events-img-1.jpg',
             'time' => '4:00pm 6:00pm'
         ],
-    ]
+    ];
+
 @endphp
 
 <!--Events Page Start-->
@@ -70,13 +73,13 @@
                     <!--Events Single-->
                     <div class="events__single">
                         <div class="events__img">
-                            <img src="{{ asset($item['image']) }}" alt="">
+                            <img src="{{ asset($item['image']) }}" alt="{{ $item['title'] }}" style="height: 260px;">
                             <div class="events__date">
                                 <p>20 <br> oct</p>
                             </div>
                         </div>
                         <div class="events__content">
-                            <h3 class="events__title"><a href="event-details.html"> {{ $item['title'] }} </a></h3>
+                            <h3 class="events__title"><a href="{{ route("frontend.event_registration", ['event' => $item['id']   ]) }}"> {{ $item['title'] }} </a></h3>
                             <ul class="list-unstyled events__meta">
                                 <li><i class="far fa-clock"></i>{{ $item['time'] }}</li>
                                 <li><i class="fas fa-map-marker-alt"></i>{{ $item['address'] }}</li>

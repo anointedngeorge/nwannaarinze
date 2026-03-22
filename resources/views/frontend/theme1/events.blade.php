@@ -69,13 +69,13 @@
                         <!--Events Single-->
                         <div class="events__single">
                             <div class="events__img">
-                                <img src="{{ asset($item['image']) }}" alt="{{ $item['title'] }}">
+                                <img src="{{ asset($item['image']) }}" alt="{{ $item['title'] }}" style="height: 260px;">
                                 <div class="events__date">
                                     <p>{{ $item['start'] }}</p>
                                 </div>
                             </div>
                             <div class="events__content">
-                                <h3 class="events__title"><a href="event-details.html">{{ $item['title'] }}</a></h3>
+                                <h3 class="events__title"><a href="{{ route("frontend.event_registration", ['event' => $item['id'] ]) }}">{{ $item['title'] }}</a></h3>
                                 <ul class="list-unstyled events__meta">
                                     <li><i class="far fa-clock"></i>{{ $item['time'] }}</li>
                                     <li><i class="fas fa-map-marker-alt"></i>{{ $item['address'] }}</li>

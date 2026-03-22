@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreContactsRequest;
+use App\Http\Requests\StoreEventRegistrationRequest;
 use App\Http\Requests\StorePartnershipRequest;
 use App\Http\Requests\StoreVolunteersRequest;
 use App\Models\Contacts;
+use App\Models\EventRegistration;
 use App\Models\Media;
+use App\Models\MEvents;
 use App\Models\Partnership;
 use App\Models\Volunteers;
 use Illuminate\Support\Facades\Request;
@@ -68,7 +71,7 @@ class FrontendController extends Controller
                 'medias/' . $data['name'],
                 'public'
             );
-            
+
 
             $media = Media::create([
                 'media' => $path,
@@ -135,5 +138,33 @@ class FrontendController extends Controller
     }
 
 
+    public function eventLoadRegistration(MEvents $event)
+    {
+        // dd($event->id);
+        $context = [];
+        $context['event'] = $event;
+        $context['page_title'] =  $event['title'] ?? "Event Registration";
 
+        // 
+        return view('frontend.theme1.registration', $context);
+    }
+
+    public function eventStoreRegistration(StoreEventRegistrationRequest $request)
+    {
+        $data = $request->validated();
+
+        // dd($data['event']);
+
+        $exists = EventRegistration::where('email', $data['email'])->where('event', $data['event'])->exists();
+
+        if (!$exists) {
+            // dd(EventRegistration::create($data));
+            EventRegistration::create($data);
+        }
+        
+        session()->flash('type', 'success');
+        session()->flash('message', "Dear {$data['first_name']}, we'll get back to you shortly .");
+
+        return to_route('frontend.index');
+    }
 }

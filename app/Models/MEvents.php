@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MEvents extends Model
 {
+
     public $fillable = [
         'title',
         'content',
@@ -14,6 +15,18 @@ class MEvents extends Model
         'address',
         'date',
         'image',
-        'time'
+        'time',
+        'can_register'
     ];
+
+
+    public function registrations()
+    {
+        return $this->hasMany(EventRegistration::class, "event");
+    }
+
+    public function getTotalRegistration()
+    {
+        return $this->registrations()->count();
+    }
 }

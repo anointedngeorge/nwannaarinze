@@ -16,7 +16,7 @@ class MEventsController extends Controller
     public function index()
     {
         $context = [];
-        $products = MEvents::query()->paginate(550);
+        $products = MEvents::query()->paginate(1000);
         $context['page_title'] = "List all Events";
         $context['page_table_title'] = "All Events";
         $context['messages'] = session();
@@ -91,13 +91,27 @@ class MEventsController extends Controller
         return view('dashboards.admin1.events.modal.edit', $context);
     }
 
+
+    public function participant(MEvents $event)
+    {
+        $context = [];
+        $context['page_title'] = "Edit { $event->name } ";
+        $context['page_table_title'] = "Event Participants";
+        $context['event'] = $event;
+        return view('dashboards.admin1.events.modal.participant', $context);
+    }
+
+
+
+
+
+
     /**
      * Update the specified resource in storage.
      */
     public function update(UpdateMEventsRequest $request, MEvents $event)
     {
         $data = $request->validated();
-        // dd($data);
 
         // If a new image is uploaded
         if ($request->hasFile('image')) {
