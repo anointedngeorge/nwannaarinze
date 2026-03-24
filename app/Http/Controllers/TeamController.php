@@ -2,30 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreBlogsRequest;
-use App\Http\Requests\UpdateBlogsRequest;
-use App\Http\Resources\BlogResource;
-use App\Models\Blogs;
+use App\Http\Requests\StoreTeamRequest;
+use App\Http\Requests\UpdateTeamRequest;
+use App\Http\Resources\TeamResources;
 use App\Models\Media;
-use Storage;
+use App\Models\Team;
 
-
-class BlogsController extends Controller
+class TeamController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $context = [];
-        $products = Blogs::query()->paginate(550);
-        $context['page_title'] = "List all blogs";
-        $context['page_table_title'] = "All Blogs";
+         $context = [];
+        $products = Team::query()->paginate(550);
+        $context['page_title'] = "List all Team";
+        $context['page_table_title'] = "All Teams";
         $context['messages'] = session();
-        $context['results'] = BlogResource::collection($products);
+        $context['results'] = TeamResources::collection($products);
 
         // return view
-        return view('dashboards.admin1.blog.list', $context);
+        return view('dashboards.admin1.team.list', $context);
     }
 
     /**
@@ -34,30 +32,28 @@ class BlogsController extends Controller
     public function create()
     {
         $context = [];
-        return view('dashboards.admin1.blog.modal.create', $context);
+        return view('dashboards.admin1.team.modal.create', $context);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreBlogsRequest $request)
+    public function store(StoreTeamRequest $request)
     {
         $data = $request->validated();
-
-        // dd($data);
 
         // Check if image is uploaded
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $path = $file->store(
-                'medias/' . $data['title'],
+                'medias/' . $data['name'],
                 'public'
             );
 
 
             $media = Media::create([
                 'media' => $path,
-                'title' => $data['title'],
+                'title' => $data['name'],
                 // 'type' => $file->getClientMimeType(),
             ]);
 
@@ -65,18 +61,18 @@ class BlogsController extends Controller
             $data['image'] = $media->media;
         }
 
-        Blogs::create($data);
+        Team::create($data);
 
         session()->flash('type', 'success');
         session()->flash('message', "Successfully created");
 
-        return to_route('blog.index');
+        return to_route('team.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Blogs $blog)
+    public function show(Team $team)
     {
         //
     }
@@ -84,19 +80,19 @@ class BlogsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Blogs $blog)
+    public function edit(Team $team)
     {
         $context = [];
-        $context['page_title'] = "Edit { $blog->title } ";
-        $context['page_table_title'] = "Edit Blog";
-        $context['result'] = $blog;
-        return view('dashboards.admin1.blog.modal.edit', $context);
+        $context['page_title'] = "Edit { $team->name } ";
+        $context['page_table_title'] = "Edit team";
+        $context['result'] = $team;
+        return view('dashboards.admin1.team.modal.edit', $context);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateBlogsRequest $request, Blogs $blog)
+    public function update(UpdateTeamRequest $request, Team $team)
     {
         $data = $request->validated();
         // dd($data);
@@ -105,7 +101,7 @@ class BlogsController extends Controller
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $path = $file->store(
-                'medias/' . $data['title'],
+                'medias/' . $data['name'],
                 'public'
             );
 
@@ -113,7 +109,7 @@ class BlogsController extends Controller
             // Save media
             $media = Media::create([
                 'media' => $path,
-                'title' => $data['title'],
+                'title' => $data['name'],
             ]);
 
             // Store media path in volunteers table
@@ -121,32 +117,32 @@ class BlogsController extends Controller
         }
 
         // Update the volunteer record
-        $blog->update($data);
+        $team->update($data);
 
         // Success message
         session()->flash('type', 'success');
         session()->flash('message', "Successfully updated");
 
-        return to_route('blog.index');
+        return to_route('team.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Blogs $blog)
+    public function destroy(Team $team)
     {
-        try {
+         try {
             // Optionally delete the associated image if it exists
-            if ($blog->image && \Storage::disk('public')->exists($blog->image)) {
-                \Storage::disk('public')->delete($blog->image);
+            if ($team->image && \Storage::disk('public')->exists($team->image)) {
+                \Storage::disk('public')->delete($team->image);
             }
 
             // Delete the volunteer record
-            $blog->delete();
+            $team->delete();
 
             // Flash success message
             session()->flash('type', 'success');
-            session()->flash('message', 'Blog deleted successfully.');
+            session()->flash('message', 'Teams deleted successfully.');
         } catch (\Throwable $th) {
             // Flash error message
             session()->flash('type', 'error');
@@ -154,6 +150,6 @@ class BlogsController extends Controller
         }
 
         // Redirect back to index page
-        return to_route('blog.index');
+        return to_route('team.index');
     }
 }

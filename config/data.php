@@ -2,7 +2,7 @@
 
 return [
     'name' => "Nwanna Arinze Foundation",
-    'phone1' => '+2349020005932',
+    'phone1' => '+2347069488852',
     'phone2' => '+2349020005932',
     'address' => 'No. 54 Federal College Road, Independence Layout by ESBS, Enugu',
     'email' => "nwannaarinzefoundation@gmail.com",
@@ -12,8 +12,8 @@ return [
     'youtube' => '#',
     'twitter' => '#',
     'instagram' => '#',
-    'whatsapp' => "+2340002034303",
-    'url' => 'https://example.com/',
+    'whatsapp' => "+2347069488852",
+    'url' => 'https://www.nwannaarinzefoundation.org/',
     'logo' => 'assets/images/logos/logo2.jpg',
     'footer_logo' => 'assets/images/logos/logo1.png',
     'fav' => 'invena/images/logo/favicon.png',

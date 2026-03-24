@@ -8,8 +8,10 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\MEventsController;
 use App\Http\Controllers\PartnershipController;
 use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TestimoniesController;
 use App\Http\Controllers\VolunteersController;
 // use App\Models\Partnership;
 use Illuminate\Support\Facades\Route;
@@ -34,6 +36,11 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
     Route::resource('/media', MediaController::class);
     Route::resource('/setting', SettingsController::class);
     Route::resource('/contacts', ContactsController::class);
+    // 
+    Route::resource('/projects', ProjectsController::class);
+    Route::resource('/testimonies', TestimoniesController::class);
+    Route::resource('/team', TeamController::class);
+
 
     // 
 

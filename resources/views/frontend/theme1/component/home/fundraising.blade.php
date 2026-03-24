@@ -9,7 +9,8 @@
             <div class="col-xl-12">
                 <div class="fundraishing__inner">
                     <p class="fundraishing__sub-title">We’re Here to Support Them</p>
-                    <h2 class="fundraishing__title">Fueling Change,  <span>One Cause at a </span>  <br> Time</h2>
+                    to advert for Mindshift
+                    <h2 class="fundraishing__title">To Advertise,  <span>For </span>  <br> Mindshift</h2>
                     <div class="fundraishing__btn-box">
                         <a href="{{ route('frontend.index', ['q'=>'partnership']) }}" class="thm-btn fundraishing__btn">Start Donating now</a>
                     </div>

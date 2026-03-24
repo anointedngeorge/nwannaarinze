@@ -58,4 +58,6 @@
     @include('frontend.theme1.component.home.help')
     <!--Help People End-->
 
+    @include('frontend.theme1.component.home.team')
+
 @endsection

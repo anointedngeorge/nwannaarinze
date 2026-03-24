@@ -8,6 +8,7 @@
                         <div class="feature-two__img">
                             <img src="{{ asset('assets/images/image2/use.jpg') }}" alt="...">
                             <div class="feature-two__content">
+                                
                                 <h3 class="feature-two__title"><a href="{{ route('frontend.index', ['q'=>'about']) }}">More <br> Charity <br>
                                         Better Lives</a></h3>
                                 <a href="about.html" class="feature-two__arrow"><span
@@ -22,8 +23,8 @@
                         <div class="feature-two__img feature-two__img-2">
                             <img src="{{ asset('assets/images/image2/use.jpg') }}" alt="..">
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="become-volunteer.html">How to <br>
-                                        Bceome <br> Volunteer</a></h3>
+                                <h3 class="feature-two__title"><a href="become-volunteer.html">Become <br>
+                                        A Volunteer</a></h3>
                                 <a href="become-volunteer.html" class="feature-two__arrow"><span
                                         class="icon-right-arrow"></span></a>
                             </div>
@@ -36,8 +37,8 @@
                         <div class="feature-two__img feature-two__img-3">
                             <img src="{{ asset('assets/images/image2/use.jpg') }}" alt="">
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="#">Give <br> Children <br>
-                                        Educations</a></h3>
+                                <h3 class="feature-two__title"><a href="#">Back <br> To School <br>
+                                        Project</a></h3>
                                 <a href="#" class="feature-two__arrow"><span
                                         class="icon-right-arrow"></span></a>
                             </div>

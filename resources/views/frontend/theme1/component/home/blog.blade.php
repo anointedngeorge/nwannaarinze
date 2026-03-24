@@ -31,7 +31,7 @@ $items = !empty($frontendData->blogs) ? $frontendData->blogs
     <div class="container">
         <div class="section-title text-center">
             <span class="section-title__tagline">From the Blog</span>
-            <h2 class="section-title__title">News & Articles</h2>
+            <h2 class="section-title__title">NAF Updates</h2>
         </div>
         <div class="row">
             <!--Blog One single-->

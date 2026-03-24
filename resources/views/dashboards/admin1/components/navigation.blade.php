@@ -15,6 +15,31 @@ $links = [
         "href" => "dashboard",
     ],
 
+
+    (object) [
+        "icon" => "flaticon-025-dashboard",
+        "name" => "Projects",
+        "has_children" => false,
+        "children" => [],
+        "href" => "projects.index",
+    ],
+
+    (object) [
+        "icon" => "flaticon-025-dashboard",
+        "name" => "Testimonies",
+        "has_children" => false,
+        "children" => [],
+        "href" => "testimonies.index",
+    ],
+
+    (object) [
+        "icon" => "flaticon-025-dashboard",
+        "name" => "Teams",
+        "has_children" => false,
+        "children" => [],
+        "href" => "team.index",
+    ],
+
     (object) [
         "icon" => "flaticon-381-user",
         "name" => "Volunteers",

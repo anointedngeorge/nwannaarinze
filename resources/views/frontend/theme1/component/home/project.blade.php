@@ -1,7 +1,7 @@
 <!--Cause Two End-->
 <?php 
  
-    $items = (object) [
+    $items = !empty($frontendData->projects) ? $frontendData->projects : (object) [
     (object) [
         'image' => 'assets/images/image2/R.jpg',
         'tag' => 'School Projects',
@@ -43,7 +43,7 @@
                     @foreach ($items as $item)
                         <div class="causes-one__single">
                             <div class="causes-one__img">
-                                <img src="{{ asset($item->image) }}" alt="{{ $item->title }}" style="width: 100%; height: 250px;">
+                                <img src="{{ asset("storage/" . $item->image ?? $item->image) }}" alt="{{ $item->title }}" style="width: 100%; height: 250px;">
                                 <div class="causes-one__category">
                                     <span>{{ $item->tag }}</span>
                                 </div>

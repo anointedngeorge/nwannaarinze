@@ -19,8 +19,8 @@
         [
             "icon" => "icon-social-campaign",
             "class" => " we-change__counter-icon-clr-extra",
-            "dataCount" => "5",
-            "dataCountText" => "5",
+            "dataCount" => "12",
+            "dataCountText" => "12",
             "delay" => "200ms",
             "text" => "Completed Project"
         ],

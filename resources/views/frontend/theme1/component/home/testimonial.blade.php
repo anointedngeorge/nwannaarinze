@@ -1,28 +1,30 @@
 <?php 
   
-        $items = (object) [
-    (object) [
-        'name' => "Okey Barnabas",
-        'tag' => 'Agbor, Delta State-Nigeria ',
-        'content' => "When I saw what was brought to my family I was filled with tears and couldn't utter a word. Thank you NAF and staff."
-    ],
+        $items = !empty($frontendData->testimonies) ? $frontendData->testimonies : (object) [
+            (object) [
+                'name' => "Okey Barnabas",
+                'tag' => 'Agbor, Delta State-Nigeria ',
+                'content' => "When I saw what was brought to my family I was filled with tears and couldn't utter a word. Thank you NAF and staff."
+            ],
 
-    (object) [
-        'name' => "Anu Roseline",
-        'tag' => "Ijora, Ogun State-Nigeria ",
-        'content' => "My tearS have been wiped away by this wonderful Organisation. I am very grateful Thank you NAF."
-    ],
-    (object) [
-        'name' => "Mr. Anderson Koga",
-        'tag' => "Northwest Zambia ",
-        'content' => "We are and will remain grateful to you Nwanna Arinze Foundation for this gesture. Thank you a million time."
-    ],
-    (object) [
-        'name' => "Okey Barnabas",
-        'tag' => "Oba Anambra State-Nigeria ",
-        'content' => "When I saw what was brought to my family I was filled with tears and couldn't utter a word. Thank you NAF and staff."
-    ]
-];
+            (object) [
+                'name' => "Anu Roseline",
+                'tag' => "Ijora, Ogun State-Nigeria ",
+                'content' => "My tearS have been wiped away by this wonderful Organisation. I am very grateful Thank you NAF."
+            ],
+
+            (object) [
+                'name' => "Mr. Anderson Koga",
+                'tag' => "Northwest Zambia ",
+                'content' => "We are and will remain grateful to you Nwanna Arinze Foundation for this gesture. Thank you a million time."
+            ],
+
+            (object) [
+                'name' => "Okey Barnabas",
+                'tag' => "Oba Anambra State-Nigeria ",
+                'content' => "When I saw what was brought to my family I was filled with tears and couldn't utter a word. Thank you NAF and staff."
+            ]
+        ];
 
   ?>
 
@@ -56,7 +58,8 @@
                                 </div>
                                 <div class="testimonial-two__client-info">
                                     <div class="testimonial-two__client-img">
-                                        {{-- <img src="assets/images/logos/logo1.png" alt="{{ $item->name }}" style="width:30%; height: 30%;"> --}}
+                                        {{-- <img src="assets/images/logos/logo1.png" alt="{{ $item->name }}"
+                                            style="width:30%; height: 30%;"> --}}
                                     </div>
                                     <div class="testimonial-two__client-details">
                                         <h5 class="testimonial-two__client-name">{{ $item->name }}</h5>

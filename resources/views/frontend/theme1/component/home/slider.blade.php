@@ -24,7 +24,8 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="main-slider__content">
-                                <h2>Every Good <br> Act is a Charity</h2>
+                                 transforming societies
+                                <h2>Touching lives  <br> and Touching lives </h2>
                                 <p>We are here to support you every step of the way</p>
                                 <a href="about.html" class="thm-btn">Discover More</a>
                                 <div class="main-slider-two-map">

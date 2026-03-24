@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreBlogsRequest;
-use App\Http\Requests\UpdateBlogsRequest;
-use App\Http\Resources\BlogResource;
-use App\Models\Blogs;
+use App\Http\Requests\StoreTestimoniesRequest;
+use App\Http\Requests\UpdateTestimoniesRequest;
+use App\Http\Resources\TestimonyResources;
 use App\Models\Media;
-use Storage;
+use App\Models\Testimonies;
 
-
-class BlogsController extends Controller
+class TestimoniesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,14 +16,14 @@ class BlogsController extends Controller
     public function index()
     {
         $context = [];
-        $products = Blogs::query()->paginate(550);
-        $context['page_title'] = "List all blogs";
-        $context['page_table_title'] = "All Blogs";
+        $products = Testimonies::query()->paginate(550);
+        $context['page_title'] = "List all Testimonies";
+        $context['page_table_title'] = "All Testimonies";
         $context['messages'] = session();
-        $context['results'] = BlogResource::collection($products);
+        $context['results'] = TestimonyResources::collection($products);
 
         // return view
-        return view('dashboards.admin1.blog.list', $context);
+        return view('dashboards.admin1.testimonies.list', $context);
     }
 
     /**
@@ -34,16 +32,15 @@ class BlogsController extends Controller
     public function create()
     {
         $context = [];
-        return view('dashboards.admin1.blog.modal.create', $context);
+        return view('dashboards.admin1.testimonies.modal.create', $context);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreBlogsRequest $request)
+    public function store(StoreTestimoniesRequest $request)
     {
         $data = $request->validated();
-
         // dd($data);
 
         // Check if image is uploaded
@@ -65,18 +62,18 @@ class BlogsController extends Controller
             $data['image'] = $media->media;
         }
 
-        Blogs::create($data);
+        Testimonies::create($data);
 
         session()->flash('type', 'success');
         session()->flash('message', "Successfully created");
 
-        return to_route('blog.index');
+        return to_route('testimonies.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Blogs $blog)
+    public function show(Testimonies $testimonies)
     {
         //
     }
@@ -84,19 +81,19 @@ class BlogsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Blogs $blog)
+    public function edit(Testimonies $testimony)
     {
         $context = [];
-        $context['page_title'] = "Edit { $blog->title } ";
-        $context['page_table_title'] = "Edit Blog";
-        $context['result'] = $blog;
-        return view('dashboards.admin1.blog.modal.edit', $context);
+        $context['page_title'] = "Edit { $testimony->title } ";
+        $context['page_table_title'] = "Edit testimonie";
+        $context['result'] = $testimony;
+        return view('dashboards.admin1.testimonies.modal.edit', $context);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateBlogsRequest $request, Blogs $blog)
+    public function update(UpdateTestimoniesRequest $request, Testimonies $testimony)
     {
         $data = $request->validated();
         // dd($data);
@@ -121,28 +118,28 @@ class BlogsController extends Controller
         }
 
         // Update the volunteer record
-        $blog->update($data);
+        $testimony->update($data);
 
         // Success message
         session()->flash('type', 'success');
         session()->flash('message', "Successfully updated");
 
-        return to_route('blog.index');
+        return to_route('testimonies.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Blogs $blog)
+    public function destroy(Testimonies $testimony)
     {
         try {
             // Optionally delete the associated image if it exists
-            if ($blog->image && \Storage::disk('public')->exists($blog->image)) {
-                \Storage::disk('public')->delete($blog->image);
+            if ($testimony->image && \Storage::disk('public')->exists($testimony->image)) {
+                \Storage::disk('public')->delete($testimony->image);
             }
 
             // Delete the volunteer record
-            $blog->delete();
+            $testimony->delete();
 
             // Flash success message
             session()->flash('type', 'success');
@@ -154,6 +151,6 @@ class BlogsController extends Controller
         }
 
         // Redirect back to index page
-        return to_route('blog.index');
+        return to_route('testimonies.index');
     }
 }
