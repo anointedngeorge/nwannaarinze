@@ -11,7 +11,7 @@ class StoreSlidersRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,13 @@ class StoreSlidersRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
+        return  [
+            'title' => ['string', 'required'],
+            'sub_title' => ['string', 'nullable'],
+            'btn_title' => ['string', 'nullable'],
+            'btn_url' => ['string', 'nullable'],
+            'image' => ['image', 'required', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
+            'can_show' => ['boolean']
         ];
     }
 }

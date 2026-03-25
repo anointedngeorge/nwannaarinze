@@ -153,6 +153,5 @@ class ProjectsController extends Controller
 
         // Redirect back to index page
         return to_route('projects.index');
-    
     }
 }

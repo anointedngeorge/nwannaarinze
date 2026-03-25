@@ -15,67 +15,35 @@
 "delay": 5000
 }}'>
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
+
+            @php
+                $sliders = $frontendData->sliders;
+            @endphp
+
+            @foreach ($sliders as  $slider)
+                <div class="swiper-slide">
                 <div class="image-layer"
-                    style="background-image: url({{ asset('assets/images/images/main-slider-2-1.jpg') }});">
+                    style="background-image: url({{ asset('storage/' . $slider->image) }});">
                 </div>
                 <!-- /.image-layer -->
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="main-slider__content">
-                                 transforming societies
-                                <h2>Touching lives  <br> and Touching lives </h2>
-                                <p>We are here to support you every step of the way</p>
-                                <a href="about.html" class="thm-btn">Discover More</a>
+                                <h2> {{ $slider->title }} </h2>
+                                <p>{{ $slider->sub_title }}</p>
+                                <a href="{{ $slider->btn_url }}" class="thm-btn">{{ $slider->btn_title }}</a>
                                 <div class="main-slider-two-map">
-                                    <img src="{{ asset('assets/images/shapes/main-slider-two-map.png') }}" alt="">
+                                    <img src="{{ asset('storage/' . $slider->image) }}" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="image-layer"
-                    style="background-image: url({{ asset('assets/images/images/main-slider-2-2.jpg') }});">
-                </div>
-                <!-- /.image-layer -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="main-slider__content">
-                                <h2>Every Good <br> Act is a Charity</h2>
-                                <p>We are here to support you every step of the way</p>
-                                <a href="about.html" class="thm-btn">Discover More</a>
-                                <div class="main-slider-two-map">
-                                    <img src="{{ asset('assets/images/shapes/main-slider-two-map.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="image-layer"
-                    style="background-image: url({{ asset('assets/images/image2/res1.jpg') }});">
-                </div>
-                <!-- /.image-layer -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="main-slider__content">
-                                <h2>Every Good <br> Act is a Charity</h2>
-                                <p>We are here to support you every step of the way</p>
-                                <a href="about.html" class="thm-btn">Discover More</a>
-                                <div class="main-slider-two-map">
-                                    <img src="{{ asset('assets/images/shapes/main-slider-two-map.png') }}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+            
+       
         </div>
         <!-- If we need navigation buttons -->
         <div class="swiper-pagination" id="main-slider-pagination"></div>

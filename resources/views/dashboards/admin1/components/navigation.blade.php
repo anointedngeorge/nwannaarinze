@@ -26,6 +26,14 @@ $links = [
 
     (object) [
         "icon" => "flaticon-025-dashboard",
+        "name" => "Sliders",
+        "has_children" => false,
+        "children" => [],
+        "href" => "slider.index",
+    ],
+
+    (object) [
+        "icon" => "flaticon-025-dashboard",
         "name" => "Testimonies",
         "has_children" => false,
         "children" => [],

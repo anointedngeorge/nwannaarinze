@@ -10,6 +10,7 @@ use App\Http\Controllers\PartnershipController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\SlidersController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimoniesController;
 use App\Http\Controllers\VolunteersController;
@@ -40,6 +41,7 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
     Route::resource('/projects', ProjectsController::class);
     Route::resource('/testimonies', TestimoniesController::class);
     Route::resource('/team', TeamController::class);
+    Route::resource('/slider', SlidersController::class);
 
 
     // 
