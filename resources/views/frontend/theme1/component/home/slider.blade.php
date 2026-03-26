@@ -30,7 +30,7 @@
                             <div class="col-xl-12">
                                 <div class="main-slider__content">
                                     <h2> {{ $slider->title }} </h2> 
-                                    <h4 class="text text-white h4">{{ $slider->sub_title }}</h4>
+                                    <h4 class="text text-white h4 mt-4 mb-4">{{ $slider->sub_title }}</h4>
                                     <a href="{{ $slider->btn_url }}" class="thm-btn">{{ $slider->btn_title }}</a>
                                     {{-- <div class="main-slider-two-map">
                                         <img src="{{ Storage::url($slider->image) }}" alt="">
