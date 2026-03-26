@@ -20,30 +20,29 @@
                 $sliders = $frontendData->sliders;
             @endphp
 
-            @foreach ($sliders as  $slider)
-                <div class="swiper-slide">
-                <div class="image-layer"
-                    style="background-image: url({{ asset('storage/' . $slider->image) }});">
-                </div>
-                <!-- /.image-layer -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="main-slider__content">
-                                <h2> {{ $slider->title }} </h2>
-                                <p>{{ $slider->sub_title }}</p>
-                                <a href="{{ $slider->btn_url }}" class="thm-btn">{{ $slider->btn_title }}</a>
-                                <div class="main-slider-two-map">
-                                    <img src="{{ asset('storage/' . $slider->image) }}" alt="">
+            @foreach ($sliders as $slider)
+                <div class="swiper-slide"  >
+                    
+                    <div class="image-layer" style="background-image: url('{{ Storage::url($slider->image) }}'); background-position: top;"></div>
+                    <!-- /.image-layer -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="main-slider__content">
+                                    <h2> {{ $slider->title }} </h2> 
+                                    <p>{{ $slider->sub_title }}</p>
+                                    <a href="{{ $slider->btn_url }}" class="thm-btn">{{ $slider->btn_title }}</a>
+                                    {{-- <div class="main-slider-two-map">
+                                        <img src="{{ Storage::url($slider->image) }}" alt="">
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             @endforeach
-            
-       
+
+
         </div>
         <!-- If we need navigation buttons -->
         <div class="swiper-pagination" id="main-slider-pagination"></div>
