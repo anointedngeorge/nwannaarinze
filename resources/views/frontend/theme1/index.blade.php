@@ -31,7 +31,7 @@
     <!--Testimonial Two End-->
 
     <!--Volunteers One Start-->
-    @include('frontend.theme1.component.home.volunteers2')
+    {{-- @include('frontend.theme1.component.home.volunteers2') --}}
     <!--Volunteers One End-->
 
     <!--We Change Start-->
