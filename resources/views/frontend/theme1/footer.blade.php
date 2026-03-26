@@ -61,7 +61,7 @@
                                     <span class="icon-telephone"></span>
                                 </div>
                                 <div class="text">
-                                    <a href="tel:{{ config('data.phone1') }}"> {{ config('data.phone1') }}</a><br>
+                                    <a href="tel:{{ config('data.phone1') }}"> {{ config('data.phone1') }}</a>, 
                                     <a href="tel:{{ config('data.phone2') }}"> {{ config('data.phone2') }}</a>
                                 </div>
                             </li>
