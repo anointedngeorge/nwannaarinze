@@ -63,6 +63,19 @@ $links = [
 
     (object) [
         "icon" => "flaticon-381-user",
+        "name" => "Scholarships",
+        "has_children" => false,
+        "children" => [
+            (object) [
+                "name" => "hi",
+                "href" => "/"
+            ]
+        ],
+        "href" => "scholarships.index",
+    ],
+
+    (object) [
+        "icon" => "flaticon-381-user",
         "name" => "Partnership",
         "has_children" => false,
         "children" => [

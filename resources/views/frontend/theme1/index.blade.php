@@ -54,6 +54,11 @@
      @include('frontend.theme1.component.general.events')
      <!--events Two End-->
 
+
+    <!--scholorship Two Start-->
+     @include('frontend.theme1.component.home.scholarship')
+     <!--scholorship Two End-->
+
     <!--Help People Start-->
     @include('frontend.theme1.component.home.help')
     <!--Help People End-->

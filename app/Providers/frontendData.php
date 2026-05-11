@@ -7,6 +7,7 @@ use App\Http\Resources\BlogResource;
 use App\Http\Resources\EventsResource;
 use App\Http\Resources\PartnershipResource;
 use App\Http\Resources\ProjectsResource;
+use App\Http\Resources\ScholarshipResource;
 use App\Http\Resources\SliderResource;
 use App\Http\Resources\TeamResources;
 use App\Http\Resources\TestimonyResources;
@@ -15,6 +16,7 @@ use App\Models\Blogs;
 use App\Models\MEvents;
 use App\Models\Partnership;
 use App\Models\Projects;
+use App\Models\Scholarship;
 use App\Models\Sliders;
 use App\Models\Team;
 use App\Models\Testimonies;
@@ -46,6 +48,7 @@ class frontendData extends ServiceProvider
             $testimonies = Testimonies::all();
             $team = Team::all();
             $sliders = Sliders::all();
+            $scholarships = Scholarship::query()->where('status', true)->get();
 
             $data = (object)[
                 'volunteers' => VolunteersResource::collection($volunteers)->toArray(request()),
@@ -56,6 +59,7 @@ class frontendData extends ServiceProvider
                 'testimonies' => TestimonyResources::collection($testimonies),
                 'team' => TeamResources::collection($team)->toArray(request()),
                 'sliders' => SliderResource::collection($sliders),
+                'scholarships' => ScholarshipResource::collection($scholarships),
             ];
 
             

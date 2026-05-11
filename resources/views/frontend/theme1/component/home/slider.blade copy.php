@@ -15,10 +15,9 @@
 "delay": 5000
 }}'>
         <div class="swiper-wrapper">
+
             <div class="swiper-slide">
-                <div class="image-layer"
-                    style="background-image: url({{ asset('assets/images/images/main-slider-2-1.jpg') }});">
-                </div>
+                <div class="image-layer" style="background-image: url({{ asset('assets/images/images/main-slider-2-1.jpg') }});"> </div>
                 <!-- /.image-layer -->
                 <div class="container">
                     <div class="row">
@@ -36,6 +35,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="swiper-slide">
                 <div class="image-layer"
                     style="background-image: url({{ asset('assets/images/images/main-slider-2-2.jpg') }});">
@@ -56,6 +56,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="swiper-slide">
                 <div class="image-layer"
                     style="background-image: url({{ asset('assets/images/image2/res1.jpg') }});">

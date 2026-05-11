@@ -56,6 +56,10 @@ class FrontendController extends Controller
                 $data['page_title'] = "team";
                 return view("frontend.theme1." . $name, $data);
 
+            // case 'scholarship':
+            //     $data['page_title'] = "Scholarships";
+            //     return view("frontend.theme1." . $name, $data);
+
             default:
                 $data['page_title'] = "Welcome To " . config('data.name');
                 return view("frontend.theme1.index", $data);
