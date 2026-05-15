@@ -54,7 +54,7 @@ $items = !empty($frontendData->scholarships) ? $frontendData->scholarships : nul
                                 </p>
 
                                 <div class="events__meta text-center">
-                                    <a href="{{ $item['google_form_link'] }}" target="_blank"
+                                    <a href="{{ route('frontend.scholarships.apply', ['scholarship' => $item['id']]) }}" target="_blank"
                                         class="events__meta-btn thm-btn">Apply Now</a>
                                 </div>
                             </div>

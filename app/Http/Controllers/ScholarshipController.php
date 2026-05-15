@@ -68,6 +68,16 @@ class ScholarshipController extends Controller
         return view('dashboards.admin1.scholarships.modal.edit', $context);
     }
 
+
+    public function apply(Scholarship $scholarship)
+    {
+        $context = [];
+        $context['page_title'] = "Apply for Scholarship";
+        $context['page_table_title'] = "Apply for Scholarship";
+        $context['result'] = $scholarship;
+        return view('frontend.theme1.scholarship', $context);
+    }
+
     /**
      * Update the specified resource in storage.
      */

@@ -43,8 +43,9 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
     Route::resource('/testimonies', TestimoniesController::class);
     Route::resource('/team', TeamController::class);
     Route::resource('/slider', SlidersController::class);
+    // scholarship
     Route::resource('/scholarships', ScholarshipController::class);
-
+   
 
     // 
 
@@ -64,6 +65,7 @@ Route::name("frontend.")
         Route::post('/contact', 'contacts')->name('contacts');
         Route::get('/event-registration/{event}/', 'eventLoadRegistration')->name('event_registration');
         Route::post('/event-registration', 'eventStoreRegistration')->name('event_registration_store');
+        Route::get('/scholarships/{scholarship}', [ScholarshipController::class, 'apply'])->name('scholarships.apply');
     });
 
 
