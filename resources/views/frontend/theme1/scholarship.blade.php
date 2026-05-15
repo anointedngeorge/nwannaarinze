@@ -47,27 +47,9 @@
                                 </div> --}}
                             </div>
                         </div>
-                        {{-- <div class="become-volunteer__content">
-                            <h3 class="become-volunteer__title">Requirements</h3>
-                            <p class="become-volunteer__text">To become a partner, you’ll need to meet the following
-                                criteria:</p>
-                            <ul class="list-unstyled become-volunteer__points">
-                                <li>Possess a strong commitment and readiness to collaborate effectively.</li>
-                                <li>Demonstrate reliability and professionalism in all engagements.</li>
-                                <li>Maintain a solid understanding of your industry and services.</li>
-                                <li>Be prepared to uphold high standards and deliver quality consistently.</li>
-                            </ul>
-                            <p>These requirements ensure a smooth and successful partnership built on trust and mutual
-                                growth.</p>
-                            <div class="become-volunteer__contact">
-                                <p>
-                                    <a href="tel:{{ config('data.phone1') }}"
-                                        class="become-volunteer__phone">{{config('data.phone1')}}</a>
-                                    <a href="mailto:{{ config('data.email') }}" class="become-volunteer__email">{{
-                                        config('data.email') }}</a>
-                                </p>
-                            </div>
-                        </div> --}}
+                        <div class="become-volunteer__content">
+                            <p class="text text-justify">{{ $result->description }}</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-xl-8 col-lg-8">
