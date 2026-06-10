@@ -32,10 +32,23 @@
     </div>
 
     <div class="mb-3">
+        <label>Google Form Link</label>
+        <input type="text" value="{{ $result->google_form_link }}" name="google_form_link"
+            class="form-control input-default" placeholder="https://">
+    </div>
+
+    {{-- <div class="mb-3">
+        <label>Descriptions</label>
+        <textarea name="description" class="form-control input-default">
+            {{ $result->description }}
+        </textarea>
+    </div> --}}
+
+    <div class="mb-3">
         <label>Can Register <h4>{{ $result->can_register ? "Yes" : "No" }}</h4> </label><br>
         <select name="can_register" id="">
-            <option  value="{{ 1 }}">Yes</option>
-            <option  value="{{ 0 }}">No</option>
+            <option value="{{ 1 }}">Yes</option>
+            <option value="{{ 0 }}">No</option>
         </select>
     </div>
 

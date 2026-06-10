@@ -16,6 +16,8 @@ class MEvents extends Model
         'date',
         'image',
         'time',
+        'google_form_link',
+        'description',
         'can_register'
     ];
 

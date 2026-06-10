@@ -27,9 +27,8 @@ class EventsResource extends JsonResource
             'date' => $this->date,
             'image'  => Storage::url($this->image),
             'time' => $this->time,
+            'google_form_link' => $this->google_form_link,
             'can_register' => $this->can_register,
-
-
         ];
     }
 }

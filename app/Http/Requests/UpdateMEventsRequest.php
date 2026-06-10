@@ -28,6 +28,8 @@ class UpdateMEventsRequest extends FormRequest
             'end' => ['string', 'required'],
             'address' => ['string', 'required'],
             'date' => ['string', 'nullable'],
+            'google_form_link' => ['string', 'nullable'],
+            'description' => ['string', 'nullable'],
             'time' => ['string', 'required'],
             'can_register' => ['boolean'],
             'image'  => ['image', 'nullable', 'mimes:jpeg,png,jpg,gif', 'max:2048']

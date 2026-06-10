@@ -12,24 +12,34 @@
         </div>
         <div class="col-lg-4 mb-3 mt-3">
             <label>Event Time</label>
-            <input type="time"  name="time" class="form-control input-default">
+            <input type="time" name="time" class="form-control input-default">
         </div>
     </div>
-    <div class="mb-3"> 
+    <div class="mb-3">
         <label>Event Title</label>
         <input type="text" name="title" class="form-control input-default" placeholder="Event Title" required>
     </div>
 
-    <div class="mb-3"> 
+    <div class="mb-3">
         <label>Event Address</label>
         <input type="text" name="address" class="form-control input-default" placeholder="Event Address" required>
     </div>
 
-    <div class="mb-3"> 
-         <label>Can Register</label>
-         <select name="can_register" id="">
-            <option  value="{{ 1 }}">Yes</option>
-            <option  value="{{ 0 }}">No</option>
+    <div class="mb-3">
+        <label>Google Form Link</label>
+        <input type="text" name="google_form_link" class="form-control input-default" placeholder="https://">
+    </div>
+
+    {{-- <div class="mb-3">
+        <label>Descriptions</label>
+        <textarea name="description" class="form-control input-default"> </textarea>
+    </div> --}}
+
+    <div class="mb-3">
+        <label>Can Register</label>
+        <select name="can_register" id="">
+            <option value="{{ 1 }}">Yes</option>
+            <option value="{{ 0 }}">No</option>
         </select>
     </div>
 
@@ -38,7 +48,7 @@
         <textarea name="content" class="form-control"></textarea>
     </div>
 
-    <div class="mb-3"> 
+    <div class="mb-3">
         <label>Event Image</label>
         <input type="file" name="image" class="form-control input-default" required>
     </div>
